@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+/* 動畫效果 */
 @keyframes gradient-shift {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
@@ -15,6 +16,17 @@
     50% { box-shadow: 0 0 40px rgba(0,125,199,0.9); }
 }
 
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% center; }
+    100% { background-position: 200% center; }
+}
+
+/* 基礎樣式 */
 body {
     font-family: 'Segoe UI', Arial, sans-serif;
     background: linear-gradient(135deg, #000000 0%, #001f3f 50%, #003d7a 100%);
@@ -29,370 +41,132 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    max-width: 1400px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
     padding: 0;
 }
 
+/* Header 樣式 */
 .compact-header {
     text-align: center;
-    padding: 20px;
+    padding: 25px 20px;
     background: linear-gradient(135deg, #007DC7 0%, #005a9c 100%);
-    border-bottom: 3px solid #C6CFD5;
+    border-bottom: 4px solid #C6CFD5;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.compact-header::before {
+    content: '🏀';
+    position: absolute;
+    font-size: 120px;
+    opacity: 0.15;
+    right: -20px;
+    top: -30px;
+    animation: float 3s ease-in-out infinite;
 }
 
 .compact-header h1 {
-    font-size: 2em;
-    margin-bottom: 5px;
+    font-size: 2.2em;
+    margin-bottom: 8px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+    position: relative;
+    z-index: 1;
 }
 
 .subtitle {
-    font-size: 1em;
+    font-size: 1.1em;
     opacity: 0.95;
+    position: relative;
+    z-index: 1;
 }
 
+/* Tab 導航 */
 .tab-nav {
     display: flex;
-    background: rgba(0,0,0,0.3);
-    border-bottom: 2px solid #007DC7;
+    background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%);
+    border-bottom: 3px solid #007DC7;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
 }
 
 .tab-btn {
     flex: 1;
-    padding: 15px;
+    padding: 18px 10px;
     background: transparent;
     border: none;
     color: #C6CFD5;
-    font-size: 1.1em;
+    font-size: 1.15em;
     cursor: pointer;
     transition: all 0.3s;
-    border-bottom: 3px solid transparent;
+    border-bottom: 4px solid transparent;
+    position: relative;
+    font-weight: 600;
+}
+
+.tab-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    background: #007DC7;
+    transition: all 0.3s;
+    transform: translateX(-50%);
+}
+
+.tab-btn:hover::before {
+    width: 80%;
 }
 
 .tab-btn:hover {
-    background: rgba(0,125,199,0.2);
+    background: linear-gradient(180deg, rgba(0,125,199,0.3) 0%, rgba(0,125,199,0.1) 100%);
     color: #fff;
+    transform: translateY(-2px);
 }
 
 .tab-btn.active {
-    background: rgba(0,125,199,0.3);
+    background: linear-gradient(180deg, rgba(0,125,199,0.5) 0%, rgba(0,125,199,0.3) 100%);
     color: #fff;
     border-bottom-color: #007DC7;
 }
 
+.tab-btn.active::before {
+    width: 100%;
+}
+
+/* Tab 內容 */
 .tab-content {
     display: none;
     flex: 1;
     overflow-y: auto;
-    padding: 20px;
+    padding: 25px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, transparent 50px);
 }
 
 .tab-content.active {
     display: block;
 }
 
-/* 總覽頁面 */
-.compact-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.info-card {
-    background: rgba(198,207,213,0.1);
-    border-radius: 10px;
-    border: 2px solid rgba(0,125,199,0.3);
-    overflow: hidden;
-    transition: all 0.3s;
-}
-
-.info-card:hover {
-    transform: translateY(-5px);
-    border-color: #007DC7;
-    box-shadow: 0 10px 30px rgba(0,125,199,0.5);
-}
-
-.card-header {
-    background: rgba(0,125,199,0.3);
-    padding: 10px;
-    font-weight: bold;
-    font-size: 1.1em;
-    color: #007DC7;
-    text-align: center;
-}
-
-.card-body {
-    padding: 15px;
-    font-size: 0.95em;
-}
-
-.card-body p {
-    margin: 5px 0;
-}
-
-.highlight {
-    color: #007DC7;
-    font-weight: bold;
-}
-
-.big-number {
-    font-size: 2em;
-    color: #007DC7;
-    text-align: center;
-    font-weight: bold;
-    padding: 20px;
-}
-
-.budget-display {
-    background: rgba(0,125,199,0.2);
-    border-radius: 10px;
-    padding: 20px;
-    border: 2px solid #007DC7;
-}
-
-.budget-display h2 {
-    text-align: center;
-    margin-bottom: 15px;
-    color: #007DC7;
-}
-
-.budget-compact {
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.budget-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    margin: 5px 0;
-    background: rgba(198,207,213,0.1);
-    border-radius: 5px;
-    transition: all 0.3s;
-}
-
-.budget-row:hover {
-    background: rgba(0,125,199,0.3);
-    transform: translateX(5px);
-}
-
-.budget-row.total {
-    background: rgba(0,125,199,0.4);
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-top: 10px;
-    border: 2px solid #007DC7;
-}
-
-.amount {
-    color: #007DC7;
-    font-weight: bold;
-}
-
-/* 行程頁面 - 精簡版 */
-.days-grid {
-    display: grid;
-    grid-template-columns: repeat(8, 1fr);
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.day-btn {
-    padding: 12px 5px;
-    background: rgba(198,207,213,0.1);
-    border: 2px solid rgba(0,125,199,0.3);
-    border-radius: 8px;
-    color: #C6CFD5;
-    font-size: 0.95em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.day-btn:hover {
-    background: rgba(0,125,199,0.3);
-    color: #fff;
-    transform: translateY(-3px);
-}
-
-.day-btn.active {
-    background: rgba(0,125,199,0.5);
-    border-color: #007DC7;
-    color: #fff;
-    transform: scale(1.05);
-}
-
-.day-btn.nba-day {
-    background: rgba(0,125,199,0.3);
-    border-color: #007DC7;
-    animation: glow 2s ease-in-out infinite;
-}
-
-.day-details {
-    height: calc(100vh - 280px);
-    overflow: hidden;
-}
-
-.day-detail-compact {
-    background: rgba(198,207,213,0.1);
-    border-radius: 15px;
-    padding: 20px;
-    border: 2px solid rgba(0,125,199,0.3);
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.day-detail-compact.nba-card {
-    border: 3px solid #007DC7;
-    background: rgba(0,125,199,0.2);
-    animation: glow 3s ease-in-out infinite;
-}
-
-.day-title {
-    color: #007DC7;
-    font-size: 1.3em;
-    font-weight: bold;
-    margin-bottom: 15px;
-    text-align: center;
-}
-
-.activities-compact {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    align-items: start;
-}
-
-.activity-compact {
-    background: rgba(198,207,213,0.15);
-    padding: 12px;
-    border-radius: 8px;
-    border-left: 3px solid #007DC7;
-    font-size: 0.9em;
-    line-height: 1.5;
-    transition: all 0.3s;
-    display: flex;
-    align-items: center;
-    min-height: 80px;
-}
-
-.activity-compact:hover {
-    background: rgba(0,125,199,0.3);
-    transform: scale(1.02);
-}
-
-.activity-compact.nba-activity {
-    background: rgba(0,125,199,0.3);
-    border-left-width: 5px;
-    grid-column: span 3;
-    justify-content: center;
-    text-align: center;
-    font-size: 1em;
-}
-
-.budget-tag {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 1.2em;
-    color: #007DC7;
-    font-weight: bold;
-    padding: 10px;
-    background: rgba(0,125,199,0.2);
-    border-radius: 8px;
-}
-
-/* 住宿頁面 */
-.accommodation-compact {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-bottom: 20px;
-}
-
-.acc-card {
-    background: rgba(198,207,213,0.1);
-    border-radius: 10px;
-    padding: 20px;
-    border: 2px solid rgba(0,125,199,0.3);
-    transition: all 0.3s;
-    position: relative;
-}
-
-.acc-card::after {
-    content: '🏨';
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
-    font-size: 50px;
-    opacity: 0.1;
-}
-
-.acc-card:hover {
-    transform: translateY(-5px);
-    border-color: #007DC7;
-    box-shadow: 0 10px 30px rgba(0,125,199,0.5);
-}
-
-.acc-header {
-    font-size: 1.5em;
-    color: #007DC7;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.price-tag {
-    color: #007DC7;
-    font-weight: bold;
-    font-size: 1.2em;
-    margin-top: 10px;
-}
-
-.total-acc {
-    text-align: center;
-    font-size: 1.5em;
-    color: #007DC7;
-    font-weight: bold;
-    padding: 20px;
-    background: rgba(0,125,199,0.2);
-    border-radius: 10px;
-    border: 2px solid #007DC7;
-}
-
-/* 提醒頁面 */
-.tips-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
+/* 通用卡片樣式 */
+.info-card,
+.acc-card,
 .tip-card {
-    background: rgba(198,207,213,0.1);
-    border-radius: 10px;
-    padding: 20px;
-    border: 2px solid rgba(0,125,199,0.3);
-    text-align: center;
-    transition: all 0.3s;
+    background: linear-gradient(135deg, rgba(198,207,213,0.15) 0%, rgba(198,207,213,0.05) 100%);
+    border-radius: 15px;
+    border: 2px solid rgba(0,125,199,0.4);
+    overflow: hidden;
+    transition: all 0.4s;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
 
+.info-card:hover,
+.acc-card:hover,
 .tip-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px) scale(1.02);
     border-color: #007DC7;
-    box-shadow: 0 10px 30px rgba(0,125,199,0.5);
-}
-
-.tip-icon {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.tip-title {
-    font-size: 1.3em;
-    color: #007DC7;
-    font-weight: bold;
-    margin-bottom: 10px;
+    box-shadow: 0 15px 40px rgba(0,125,199,0.6);
 }
 
 /* 響應式設計 */
@@ -406,16 +180,20 @@ body {
     .days-grid {
         grid-template-columns: repeat(4, 1fr);
     }
+    
+    .activities-compact {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 768px) {
     .compact-header h1 {
-        font-size: 1.5em;
+        font-size: 1.8em;
     }
     
     .tab-btn {
         font-size: 0.9em;
-        padding: 10px;
+        padding: 12px 8px;
     }
     
     .compact-grid,
@@ -428,7 +206,26 @@ body {
         grid-template-columns: repeat(4, 1fr);
     }
     
-    .activity-item {
+    .activities-compact {
         grid-template-columns: 1fr;
     }
+}
+
+/* 自訂滾動條 */
+.tab-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.tab-content::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.tab-content::-webkit-scrollbar-thumb {
+    background: rgba(0,125,199,0.6);
+    border-radius: 10px;
+}
+
+.tab-content::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,125,199,0.8);
 }
