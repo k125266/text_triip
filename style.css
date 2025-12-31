@@ -190,21 +190,21 @@ body {
     font-weight: bold;
 }
 
-/* 行程頁面 */
+/* 行程頁面 - 精簡版 */
 .days-grid {
     display: grid;
     grid-template-columns: repeat(8, 1fr);
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .day-btn {
-    padding: 15px 10px;
+    padding: 12px 5px;
     background: rgba(198,207,213,0.1);
     border: 2px solid rgba(0,125,199,0.3);
     border-radius: 8px;
     color: #C6CFD5;
-    font-size: 1em;
+    font-size: 0.95em;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s;
@@ -230,70 +230,78 @@ body {
 }
 
 .day-details {
-    min-height: 400px;
+    height: calc(100vh - 280px);
+    overflow: hidden;
 }
 
-.day-detail-card {
+.day-detail-compact {
     background: rgba(198,207,213,0.1);
     border-radius: 15px;
     padding: 20px;
     border: 2px solid rgba(0,125,199,0.3);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.day-detail-card.nba-card {
+.day-detail-compact.nba-card {
     border: 3px solid #007DC7;
     background: rgba(0,125,199,0.2);
     animation: glow 3s ease-in-out infinite;
 }
 
-.day-detail-card h2 {
+.day-title {
     color: #007DC7;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-}
-
-.activities {
-    display: grid;
-    gap: 15px;
-}
-
-.activity-item {
-    display: grid;
-    grid-template-columns: 150px 1fr;
-    gap: 15px;
-    padding: 15px;
-    background: rgba(198,207,213,0.1);
-    border-radius: 8px;
-    border-left: 4px solid #007DC7;
-    transition: all 0.3s;
-}
-
-.activity-item:hover {
-    background: rgba(0,125,199,0.2);
-    transform: translateX(5px);
-}
-
-.activity-item.highlight-activity {
-    background: rgba(0,125,199,0.3);
-    border-left-width: 6px;
-}
-
-.activity-time {
-    color: #007DC7;
+    font-size: 1.3em;
     font-weight: bold;
-    font-size: 1.1em;
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-.activity-desc {
-    line-height: 1.6;
+.activities-compact {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    align-items: start;
 }
 
-.day-budget {
-    margin-top: 20px;
-    text-align: right;
+.activity-compact {
+    background: rgba(198,207,213,0.15);
+    padding: 12px;
+    border-radius: 8px;
+    border-left: 3px solid #007DC7;
+    font-size: 0.9em;
+    line-height: 1.5;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    min-height: 80px;
+}
+
+.activity-compact:hover {
+    background: rgba(0,125,199,0.3);
+    transform: scale(1.02);
+}
+
+.activity-compact.nba-activity {
+    background: rgba(0,125,199,0.3);
+    border-left-width: 5px;
+    grid-column: span 3;
+    justify-content: center;
+    text-align: center;
+    font-size: 1em;
+}
+
+.budget-tag {
+    margin-top: 15px;
+    text-align: center;
     font-size: 1.2em;
     color: #007DC7;
     font-weight: bold;
+    padding: 10px;
+    background: rgba(0,125,199,0.2);
+    border-radius: 8px;
 }
 
 /* 住宿頁面 */
