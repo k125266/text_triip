@@ -448,29 +448,7 @@
 }
 
 .day-details {
-    max-height: 65vh;
-    overflow-y: auto;
-    overflow-x: hidden;
-    padding-right: 15px;
-}
-
-/* 自定義滾動條樣式 */
-.day-details::-webkit-scrollbar {
-    width: 8px;
-}
-
-.day-details::-webkit-scrollbar-track {
-    background: rgba(0, 43, 92, 0.3);
-    border-radius: 10px;
-}
-
-.day-details::-webkit-scrollbar-thumb {
-    background: rgba(0, 83, 188, 0.6);
-    border-radius: 10px;
-}
-
-.day-details::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 83, 188, 0.8);
+    padding-right: 10px;
 }
 
 /* 日期標題區域 */
