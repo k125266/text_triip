@@ -120,17 +120,95 @@
         </div>
 
         <div id="days" class="tab-content">
-            <div class="days-grid">
-                <button class="day-btn" onclick="showDay(1)">Day 1</button>
-                <button class="day-btn" onclick="showDay(2)">Day 2</button>
-                <button class="day-btn" onclick="showDay(3)">Day 3</button>
-                <button class="day-btn nba-day" onclick="showDay(4)">🏀 Day 4</button>
-                <button class="day-btn" onclick="showDay(5)">Day 5</button>
-                <button class="day-btn" onclick="showDay(6)">Day 6</button>
-                <button class="day-btn" onclick="showDay(7)">Day 7</button>
-                <button class="day-btn" onclick="showDay(8)">Day 8</button>
+            <div class="days-overview">
+                <div class="day-card" onclick="toggleDay(1)">
+                    <div class="day-card-header">
+                        <div class="day-card-title">
+                            <span class="day-badge">Day 1</span>
+                            <span class="day-info">週四 2/26 · 抵達達拉斯</span>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="day-card-content" id="day-content-1"></div>
+                </div>
+
+                <div class="day-card" onclick="toggleDay(2)">
+                    <div class="day-card-header">
+                        <div class="day-card-title">
+                            <span class="day-badge">Day 2</span>
+                            <span class="day-info">週五 2/27 · Dallas 科學與美食</span>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="day-card-content" id="day-content-2"></div>
+                </div>
+
+                <div class="day-card" onclick="toggleDay(3)">
+                    <div class="day-card-header">
+                        <div class="day-card-title">
+                            <span class="day-badge">Day 3</span>
+                            <span class="day-info">週六 2/28 · Dallas World Aquarium</span>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="day-card-content" id="day-content-3"></div>
+                </div>
+
+                <div class="day-card nba-card" onclick="toggleDay(4)">
+                    <div class="day-card-header">
+                        <div class="day-card-title">
+                            <span class="day-badge nba-badge">🏀 Day 4</span>
+                            <span class="day-info">週日 3/1 · 航空博物館 + NBA 賽事 ⭐</span>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="day-card-content" id="day-content-4"></div>
+                </div>
+
+                <div class="day-card" onclick="toggleDay(5)">
+                    <div class="day-card-header">
+                        <div class="day-card-title">
+                            <span class="day-badge">Day 5</span>
+                            <span class="day-info">週一 3/2 · Waco → Austin</span>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="day-card-content" id="day-content-5"></div>
+                </div>
+
+                <div class="day-card" onclick="toggleDay(6)">
+                    <div class="day-card-header">
+                        <div class="day-card-title">
+                            <span class="day-badge">Day 6</span>
+                            <span class="day-info">週二 3/3 · San Marcos → San Antonio</span>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="day-card-content" id="day-content-6"></div>
+                </div>
+
+                <div class="day-card" onclick="toggleDay(7)">
+                    <div class="day-card-header">
+                        <div class="day-card-title">
+                            <span class="day-badge">Day 7</span>
+                            <span class="day-info">週三 3/4 · San Antonio River Walk</span>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="day-card-content" id="day-content-7"></div>
+                </div>
+
+                <div class="day-card" onclick="toggleDay(8)">
+                    <div class="day-card-header">
+                        <div class="day-card-title">
+                            <span class="day-badge">Day 8</span>
+                            <span class="day-info">週四 3/5 · 返程日</span>
+                        </div>
+                        <span class="expand-icon">▼</span>
+                    </div>
+                    <div class="day-card-content" id="day-content-8"></div>
+                </div>
             </div>
-            <div id="day-details" class="day-details"></div>
         </div>
 
         <div id="accommodation" class="tab-content">
