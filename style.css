@@ -1,4 +1,6 @@
 /* Dallas Mavericks 官方色號 */
+@import url('https://fonts.googleapis.com/css2?family=ZCOOL+XiaoWei&display=swap');
+
 :root {
     --mavs-royal-blue: #0053BC;
     --mavs-navy-blue: #002B5C;
@@ -14,7 +16,7 @@
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Verdana, 'ZCOOL XiaoWei', sans-serif;
     background: linear-gradient(135deg, var(--mavs-black) 0%, var(--mavs-navy-blue) 100%);
     color: #fff;
     min-height: 100vh;
