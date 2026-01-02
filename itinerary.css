@@ -226,22 +226,36 @@
     .timeline-item {
         grid-template-columns: 60px 4px 1fr;
         gap: 15px;
+        margin-bottom: 25px;
     }
-    .timeline-title { 
-        font-size: 1.1em; 
+    .time-text {
+        font-size: 1em;
     }
-    .timeline-desc { 
-        font-size: 0.95em; 
+    .timeline-title {
+        font-size: 1.1em;
     }
-    .day-card-header { 
-        padding: 15px 20px; 
+    .timeline-desc {
+        font-size: 0.95em;
     }
-    .day-badge { 
-        font-size: 0.95em; 
-        padding: 6px 12px; 
+    .timeline-price {
+        font-size: 0.95em;
     }
-    .day-info { 
-        font-size: 1em; 
+    .day-card-header {
+        padding: 15px 20px;
+    }
+    .day-badge {
+        font-size: 0.95em;
+        padding: 6px 12px;
+    }
+    .day-info {
+        font-size: 1em;
+    }
+    .day-budget-footer {
+        font-size: 1.1em;
+        padding: 15px;
+    }
+    .budget-amount-large {
+        font-size: 1.3em;
     }
 }
 
@@ -249,14 +263,48 @@
     .timeline-item {
         grid-template-columns: 50px 3px 1fr;
         gap: 10px;
+        margin-bottom: 20px;
     }
-    .time-text { 
-        font-size: 0.9em; 
+    .time-text {
+        font-size: 0.85em;
     }
-    .timeline-content { 
-        padding: 15px; 
+    .timeline-title {
+        font-size: 1em;
+        margin-bottom: 8px;
     }
-    .day-card-inner { 
-        padding: 20px 15px; 
+    .timeline-desc {
+        font-size: 0.85em;
+        margin-bottom: 8px;
+    }
+    .timeline-price {
+        font-size: 0.85em;
+        margin-top: 8px;
+    }
+    .timeline-content {
+        padding: 12px;
+    }
+    .day-card-inner {
+        padding: 15px 12px;
+    }
+    .day-card-header {
+        padding: 12px 15px;
+    }
+    .day-badge {
+        font-size: 0.85em;
+        padding: 5px 10px;
+    }
+    .day-info {
+        font-size: 0.85em;
+    }
+    .expand-icon {
+        font-size: 1.2em;
+    }
+    .day-budget-footer {
+        font-size: 1em;
+        padding: 12px;
+        margin-top: 20px;
+    }
+    .budget-amount-large {
+        font-size: 1.2em;
     }
 }

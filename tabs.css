@@ -190,20 +190,112 @@
 
 /* 手機版響應式 */
 @media (max-width: 768px) {
-    .tab-nav { 
-        gap: 8px; 
+    .tab-nav {
+        gap: 8px;
     }
-    .tab-btn { 
-        min-width: 120px; 
-        padding: 12px 15px; 
-        font-size: 0.95em; 
+    .tab-btn {
+        min-width: 120px;
+        padding: 12px 15px;
+        font-size: 0.95em;
+    }
+
+    /* 機場標題 */
+    .airport-overlay h2 {
+        font-size: 1.5em;
+    }
+    .airport-overlay p {
+        font-size: 1em;
+    }
+
+    /* 卡片標題 */
+    .card-header {
+        font-size: 1.1em;
+        padding: 12px 15px;
+    }
+
+    /* 卡片內容 */
+    .card-body {
+        padding: 15px;
+    }
+    .card-body p {
+        font-size: 0.95em;
+    }
+
+    /* 大數字 */
+    .big-number {
+        font-size: 2em;
+    }
+
+    /* 預算顯示 */
+    .budget-display {
+        padding: 20px;
+    }
+    .budget-display h2 {
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+    .budget-row {
+        font-size: 1em;
+        padding: 12px 15px;
+    }
+    .budget-row.total {
+        font-size: 1.1em;
     }
 }
 
 @media (max-width: 480px) {
-    .tab-btn { 
-        min-width: 100%; 
-        font-size: 0.9em; 
-        padding: 10px; 
+    .tab-btn {
+        min-width: 100%;
+        font-size: 0.85em;
+        padding: 10px;
+    }
+
+    /* 機場標題 */
+    .airport-overlay h2 {
+        font-size: 1.3em;
+    }
+    .airport-overlay p {
+        font-size: 0.9em;
+    }
+
+    /* 卡片標題 */
+    .card-header {
+        font-size: 1em;
+        padding: 10px 12px;
+    }
+
+    /* 卡片內容 */
+    .card-body {
+        padding: 12px;
+    }
+    .card-body p {
+        font-size: 0.85em;
+        margin-bottom: 8px;
+    }
+    .highlight {
+        font-size: 1em;
+    }
+
+    /* 大數字 */
+    .big-number {
+        font-size: 1.8em;
+    }
+
+    /* 預算顯示 */
+    .budget-display {
+        padding: 15px;
+    }
+    .budget-display h2 {
+        font-size: 1.3em;
+        margin-bottom: 12px;
+    }
+    .budget-row {
+        font-size: 0.9em;
+        padding: 10px 12px;
+        margin-bottom: 8px;
+    }
+    .budget-row.total {
+        font-size: 1em;
+        margin-top: 10px;
     }
 }

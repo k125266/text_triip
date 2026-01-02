@@ -95,8 +95,91 @@
     }
 }
 
+@media (max-width: 768px) {
+    /* 住宿卡片 */
+    .acc-card {
+        padding: 20px;
+    }
+    .acc-header {
+        font-size: 1.3em;
+        margin-bottom: 12px;
+    }
+    .acc-card p {
+        font-size: 0.95em;
+    }
+    .price-tag {
+        font-size: 1.1em;
+    }
+    .total-acc {
+        font-size: 1.3em;
+        padding: 15px;
+    }
+
+    /* 提醒卡片 */
+    .tip-card {
+        padding: 20px;
+    }
+    .tip-icon {
+        font-size: 2.5em;
+        margin-bottom: 12px;
+    }
+    .tip-title {
+        font-size: 1.2em;
+    }
+    .tip-card p {
+        font-size: 0.95em;
+    }
+}
+
 @media (max-width: 600px) {
     .tips-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    /* 住宿卡片 */
+    .accommodation-compact {
+        gap: 15px;
+    }
+    .acc-card {
+        padding: 15px;
+    }
+    .acc-header {
+        font-size: 1.1em;
+        margin-bottom: 10px;
+    }
+    .acc-card p {
+        font-size: 0.85em;
+        margin-bottom: 8px;
+        line-height: 1.6;
+    }
+    .price-tag {
+        font-size: 1em;
+        margin-top: 10px;
+    }
+    .total-acc {
+        font-size: 1.1em;
+        padding: 12px;
+    }
+
+    /* 提醒卡片 */
+    .tips-grid {
+        gap: 15px;
+    }
+    .tip-card {
+        padding: 15px;
+    }
+    .tip-icon {
+        font-size: 2em;
+        margin-bottom: 10px;
+    }
+    .tip-title {
+        font-size: 1em;
+        margin-bottom: 8px;
+    }
+    .tip-card p {
+        font-size: 0.85em;
+        line-height: 1.6;
     }
 }
