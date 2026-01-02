@@ -10,9 +10,9 @@
     flex: 1;
     min-width: 150px;
     padding: 15px 20px;
-    background: linear-gradient(135deg, rgba(0, 43, 92, 0.6) 0%, rgba(0, 43, 92, 0.3) 100%);
-    border: 2px solid rgba(0, 83, 188, 0.4);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 83, 188, 0.3);
+    border-radius: 25px;
     color: var(--mavs-silver);
     font-size: 1.1em;
     font-weight: bold;
@@ -21,17 +21,19 @@
 }
 
 .tab-btn:hover {
-    background: linear-gradient(135deg, rgba(0, 83, 188, 0.5) 0%, rgba(0, 83, 188, 0.3) 100%);
+    background: rgba(255, 255, 255, 0.08);
     border-color: var(--mavs-royal-blue);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 83, 188, 0.5);
+    box-shadow: 0 8px 20px rgba(0, 83, 188, 0.4);
+    color: #fff;
 }
 
 .tab-btn.active {
-    background: linear-gradient(135deg, var(--mavs-royal-blue) 0%, rgba(0, 83, 188, 0.7) 100%);
-    border-color: var(--mavs-silver);
+    background: linear-gradient(135deg, var(--mavs-royal-blue) 0%, #0066CC 100%);
+    border-color: rgba(255, 255, 255, 0.3);
     color: #fff;
-    box-shadow: 0 8px 25px rgba(0, 83, 188, 0.6);
+    box-shadow: 0 10px 25px rgba(0, 83, 188, 0.5);
+    transform: translateY(-2px);
 }
 
 /* Tab 內容 */
@@ -47,10 +49,11 @@
 /* 總覽頁面 - 機場圖片 */
 .airport-hero {
     position: relative;
-    border-radius: 20px;
+    border-radius: 30px;
     overflow: hidden;
     margin-bottom: 30px;
     box-shadow: 0 10px 40px rgba(0, 83, 188, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.1);
 }
 
 .airport-hero img {
@@ -89,25 +92,27 @@
 }
 
 .info-card {
-    background: linear-gradient(135deg, rgba(0, 43, 92, 0.6) 0%, rgba(0, 43, 92, 0.4) 100%);
-    border: 2px solid rgba(0, 83, 188, 0.4);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 83, 188, 0.3);
+    border-radius: 25px;
     overflow: hidden;
     transition: all 0.3s;
 }
 
 .info-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 83, 188, 0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 83, 188, 0.4);
     border-color: var(--mavs-royal-blue);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .card-header {
-    background: linear-gradient(135deg, var(--mavs-royal-blue) 0%, rgba(0, 83, 188, 0.8) 100%);
+    background: linear-gradient(135deg, var(--mavs-royal-blue) 0%, #0066CC 100%);
     padding: 15px 20px;
     font-size: 1.3em;
     font-weight: bold;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: none;
+    border-radius: 25px 25px 0 0;
 }
 
 .card-body {

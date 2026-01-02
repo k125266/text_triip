@@ -7,17 +7,18 @@
 }
 
 .acc-card {
-    background: linear-gradient(135deg, rgba(0, 43, 92, 0.6) 0%, rgba(0, 43, 92, 0.4) 100%);
-    border: 2px solid rgba(0, 83, 188, 0.4);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 83, 188, 0.3);
+    border-radius: 25px;
     padding: 25px;
     transition: all 0.3s;
 }
 
 .acc-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 83, 188, 0.5);
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 83, 188, 0.4);
     border-color: var(--mavs-royal-blue);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .acc-header {
@@ -25,6 +26,10 @@
     font-weight: bold;
     margin-bottom: 15px;
     color: #FFA500;
+    background: rgba(255, 165, 0, 0.1);
+    padding: 8px 15px;
+    border-radius: 15px;
+    display: inline-block;
 }
 
 .acc-card p {
@@ -57,23 +62,25 @@
 }
 
 .tip-card {
-    background: linear-gradient(135deg, rgba(0, 43, 92, 0.6) 0%, rgba(0, 43, 92, 0.4) 100%);
-    border: 2px solid rgba(0, 83, 188, 0.4);
-    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(0, 83, 188, 0.3);
+    border-radius: 25px;
     padding: 25px;
     text-align: center;
     transition: all 0.3s;
 }
 
 .tip-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0, 83, 188, 0.5);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 35px rgba(0, 83, 188, 0.4);
     border-color: var(--mavs-royal-blue);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .tip-icon {
     font-size: 3em;
     margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(0, 83, 188, 0.3));
 }
 
 .tip-title {
@@ -81,6 +88,10 @@
     font-weight: bold;
     margin-bottom: 12px;
     color: #FFA500;
+    background: rgba(255, 165, 0, 0.1);
+    padding: 6px 12px;
+    border-radius: 12px;
+    display: inline-block;
 }
 
 .tip-card p {
