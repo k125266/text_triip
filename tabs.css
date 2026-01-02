@@ -562,3 +562,155 @@
         padding: 6px 0 6px 22px;
     }
 }
+
+/* 德州行程路線圖卡片 */
+.route-map-card {
+    grid-column: 1 / -1;
+}
+
+.map-container {
+    margin-bottom: 25px;
+    border-radius: 20px;
+    overflow: hidden;
+    border: 3px solid rgba(0, 83, 188, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.texas-map {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.route-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.route-segment {
+    background: rgba(0, 83, 188, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    border: 2px solid rgba(0, 83, 188, 0.3);
+    transition: all 0.3s;
+}
+
+.route-segment:hover {
+    background: rgba(0, 83, 188, 0.2);
+    border-color: var(--mavs-royal-blue);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 83, 188, 0.4);
+}
+
+.segment-cities {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.city-name {
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #fff;
+    background: rgba(0, 83, 188, 0.3);
+    padding: 8px 15px;
+    border-radius: 12px;
+    border: 2px solid rgba(0, 83, 188, 0.4);
+}
+
+.city-name.start {
+    background: linear-gradient(135deg, rgba(0, 255, 0, 0.2), rgba(0, 255, 0, 0.1));
+    border-color: rgba(0, 200, 0, 0.5);
+}
+
+.city-name.end {
+    background: linear-gradient(135deg, rgba(255, 165, 0, 0.2), rgba(255, 165, 0, 0.1));
+    border-color: rgba(255, 165, 0, 0.5);
+}
+
+.route-arrow {
+    font-size: 1.5em;
+    color: var(--mavs-royal-blue);
+    font-weight: bold;
+}
+
+.segment-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.1em;
+    color: var(--mavs-silver);
+}
+
+.distance {
+    color: #FFA500;
+    font-weight: bold;
+}
+
+.duration {
+    color: var(--mavs-silver);
+}
+
+.divider {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* 手機版路線圖 */
+@media (max-width: 768px) {
+    .route-info-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .route-segment {
+        padding: 15px;
+    }
+
+    .city-name {
+        font-size: 1.1em;
+        padding: 6px 12px;
+    }
+
+    .route-arrow {
+        font-size: 1.2em;
+    }
+
+    .segment-details {
+        font-size: 1em;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container {
+        margin-bottom: 15px;
+    }
+
+    .route-segment {
+        padding: 12px;
+    }
+
+    .segment-cities {
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    .city-name {
+        font-size: 1em;
+        padding: 5px 10px;
+    }
+
+    .route-arrow {
+        font-size: 1em;
+    }
+
+    .segment-details {
+        font-size: 0.9em;
+        gap: 8px;
+    }
+}
