@@ -53,21 +53,104 @@
             <div class="airport-hero scroll-reveal-scale">
                 <img src="https://suffolk.com/wp-content/uploads/2021/12/DFW-terminal-C-thumbnail.jpg" alt="Dallas Fort Worth Airport Terminal C">
                 <div class="airport-overlay">
-                    <h2><img src="https://cdn-icons-png.flaticon.com/512/12142/12142421.png" alt="Airplane" class="basketball-icon"> Dallas Fort Worth International Airport</h2>
+                    <h2><img src="https://cdn-icons-png.flaticon.com/512/12142/12142421.png" alt="Airplane" class="basketball-icon small"> Dallas Fort Worth International Airport</h2>
                     <p>您的德州籃球之旅從這裡開始</p>
                 </div>
             </div>
             <div class="compact-grid">
-                <div class="info-card scroll-reveal scroll-reveal-delay-1">
-                    <div class="card-header"><img src="https://cdn-icons-png.flaticon.com/512/12142/12142421.png" alt="Airplane" class="basketball-icon"> 航班</div>
+                <div class="info-card flight-info-card scroll-reveal scroll-reveal-delay-1">
+                    <div class="card-header"><img src="https://cdn-icons-png.flaticon.com/512/12142/12142421.png" alt="Airplane" class="basketball-icon"> 航班資訊</div>
                     <div class="card-body">
-                        <p><strong>去:</strong>2/26 長榮BR52 19:20抵達</p>
-                        <p><strong>回:</strong>3/5 長榮BR53 22:50起飛</p>
-                        <p><strong>行李:</strong>2×23kg托運+7kg手提</p>
+                        <div class="flight-route-container">
+                            <!-- 去程 -->
+                            <div class="flight-section">
+                                <div class="flight-label">去程！</div>
+                                <div class="flight-details">
+                                    <div class="flight-date">02.26</div>
+                                    <div class="flight-airline">長榮航空 BR52</div>
+                                    <div class="flight-time">19:20 起飛</div>
+                                </div>
+                                <div class="flight-route">
+                                    <div class="airport-code start">TPE</div>
+                                    <div class="flight-path-line">
+                                        <div class="plane-icon-wrapper">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/12142/12142421.png" alt="Airplane" class="flight-plane-icon">
+                                        </div>
+                                    </div>
+                                    <div class="airport-code end">DFW</div>
+                                </div>
+                            </div>
+
+                            <!-- 回程 -->
+                            <div class="flight-section">
+                                <div class="flight-label">回程！</div>
+                                <div class="flight-details">
+                                    <div class="flight-date">03.05</div>
+                                    <div class="flight-airline">長榮航空 BR53</div>
+                                    <div class="flight-time">22:50 起飛</div>
+                                </div>
+                                <div class="flight-route">
+                                    <div class="airport-code start">DFW</div>
+                                    <div class="flight-path-line reverse">
+                                        <div class="plane-icon-wrapper">
+                                            <img src="https://cdn-icons-png.flaticon.com/512/12142/12142421.png" alt="Airplane" class="flight-plane-icon">
+                                        </div>
+                                    </div>
+                                    <div class="airport-code end">TPE</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 搭機注意事項 -->
+                        <div class="flight-notes">
+                            <div class="notes-title">搭機注意事項</div>
+                            <ul class="notes-list">
+                                <li>隨身攜帶護照與身分證件</li>
+                                <li>電子產品需放在隨身行李</li>
+                                <li>行李限重：2×23kg托運+7kg手提</li>
+                                <li>建議提前3小時抵達機場</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
 
-                <div class="info-card scroll-reveal scroll-reveal-delay-2">
+                <!-- 德州行程路線圖 -->
+                <div class="info-card route-map-card scroll-reveal scroll-reveal-delay-2">
+                    <div class="card-header">🗺️ 德州行程路線</div>
+                    <div class="card-body">
+                        <div class="map-container">
+                            <img src="https://thumbs.dreamstime.com/b/texas-s-vector-high-detailed-map-showing-counties-formations-largest-cities-skylines-texas-state-texas-s-vector-high-detailed-118864030.jpg" alt="Texas Route Map" class="texas-map">
+                        </div>
+                        <div class="route-info-grid">
+                            <div class="route-segment">
+                                <div class="segment-cities">
+                                    <span class="city-name start">Dallas</span>
+                                    <span class="route-arrow">→</span>
+                                    <span class="city-name">Austin</span>
+                                </div>
+                                <div class="segment-details">
+                                    <span class="distance">315 km</span>
+                                    <span class="divider">|</span>
+                                    <span class="duration">約 3 小時</span>
+                                </div>
+                            </div>
+                            <div class="route-segment">
+                                <div class="segment-cities">
+                                    <span class="city-name">Austin</span>
+                                    <span class="route-arrow">→</span>
+                                    <span class="city-name end">San Antonio</span>
+                                </div>
+                                <div class="segment-details">
+                                    <span class="distance">130 km</span>
+                                    <span class="divider">|</span>
+                                    <span class="duration">約 1.5 小時</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-card scroll-reveal scroll-reveal-delay-3">
                     <div class="card-header"><img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon"> 租車</div>
                     <div class="card-body">
                         <p><strong>Tesla Model 3 2025(需FSD)</strong></p>
@@ -76,12 +159,12 @@
                         <p style="font-size: 0.9em; margin-top: 10px;">
                             <strong>保險:</strong>SLI + LDW<br>
                             <strong>停車:</strong>ParkMobile App<br>
-                            <strong>提醒:</strong>右駕左行、紅燈可右轉
+                            <strong>提醒:</strong>左駕右行、紅燈可右轉
                         </p>
                     </div>
                 </div>
 
-                <div class="info-card scroll-reveal scroll-reveal-delay-3">
+                <div class="info-card scroll-reveal scroll-reveal-delay-4">
                     <div class="card-header">💰 匯率</div>
                     <div class="card-body">
                         <div class="big-number">$1 ≈ NTD 32</div>
