@@ -63,7 +63,7 @@ const dayData = {
         activities: [
             { time: '12:00', title: '🍕 外送午餐', desc: '披薩或墨西哥捲餅', price: 'NTD 350-600' },
             { time: '15:00-17:00', title: '🚀 航空博物館', desc: '📍 6911 Lemmon Ave(車程 15 分鐘)<br>展覽:NASA 太空艙、復古飛機、火箭實物<br>🅿️ 免費停車', price: '門票 $10 ≈ NTD 320' },
-            { time: '19:00', title: '🏀 NBA 賽事', desc: '<strong>Dallas Mavericks vs OKC Thunder</strong><br>📍 American Airlines Center(車程 10 分鐘)<br>💡 建議 17:30-18:00 先到附近用簡餐', price: '門票 $120 ≈ NTD 3,840<br>停車 $25-40 ≈ NTD 800-1,280', isNBA: true }
+            { time: '19:00', title: '<img src="https://cdn-icons-png.flaticon.com/512/7462/7462399.png" alt="Basketball" class="basketball-icon"> NBA 賽事', desc: '<strong>Dallas Mavericks vs OKC Thunder</strong><br>📍 American Airlines Center(車程 10 分鐘)<br>💡 建議 17:30-18:00 先到附近用簡餐', price: '門票 $120 ≈ NTD 3,840<br>停車 $25-40 ≈ NTD 800-1,280', isNBA: true }
         ],
         budget: 'NTD 5,200'
     },

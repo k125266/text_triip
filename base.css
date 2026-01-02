@@ -8,6 +8,25 @@
     --mavs-black: #061922;
 }
 
+/* 籃球圖示樣式 */
+.basketball-icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 1.2em;
+    height: 1.2em;
+    object-fit: contain;
+}
+
+.basketball-icon.large {
+    width: 2em;
+    height: 2em;
+}
+
+.basketball-icon.small {
+    width: 1em;
+    height: 1em;
+}
+
 /* 基礎重置 */
 * {
     margin: 0;
