@@ -27,6 +27,17 @@
     height: 1em;
 }
 
+.basketball-icon.tiny {
+    width: 0.85em;
+    height: 0.85em;
+}
+
+.stat-icon-img {
+    width: 2em;
+    height: 2em;
+    filter: brightness(1.1);
+}
+
 /* 基礎重置 */
 * {
     margin: 0;

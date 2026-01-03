@@ -45,7 +45,32 @@ The entire design is based on the **Dallas Mavericks** official team colors:
 
 - **Primary Font**: Verdana (sans-serif)
 - **Secondary Font**: 'Noto Serif TC' (Google Fonts) for Chinese characters
-- **Emoji Usage**: Heavy use of thematic emojis (✈️🏀🚗📅🏨💡) for visual interest
+- **Icon Usage**: Flaticon images used for consistent visual elements (see Icon Reference below)
+
+### Icon & Emoji Reference
+
+All icons are sourced from Flaticon and replace traditional emojis for better consistency:
+
+| Emoji | Icon URL | Usage |
+|-------|----------|-------|
+| 🚗 | `https://cdn-icons-png.flaticon.com/512/9709/9709678.png` | Transportation, car rental, driving |
+| ✈️ | `https://cdn-icons-png.flaticon.com/512/12142/12142421.png` | Flights, airport, air travel |
+| 📊 | `https://cdn-icons-png.flaticon.com/512/4481/4481249.png` | Statistics, overview tab |
+| 🏨 | `https://cdn-icons-png.flaticon.com/512/8526/8526337.png` | Hotel, accommodation, check-in/out |
+| 💡 | `https://cdn-icons-png.flaticon.com/512/6804/6804536.png` | Tips, reminders, suggestions |
+| 🔒 | `https://cdn-icons-png.flaticon.com/512/8042/8042694.png` | Security, safety information |
+| 🛍️ | `https://cdn-icons-png.flaticon.com/512/8730/8730692.png` | Shopping, outlets, stores |
+| 🌐 | `https://cdn-icons-png.flaticon.com/512/12306/12306235.png` | Navigation, internet, global |
+| 🌮 | `https://cdn-icons-png.flaticon.com/512/7649/7649437.png` | San Antonio, Mexican food |
+| 🏀 | `https://cdn-icons-png.flaticon.com/512/7462/7462399.png` | Basketball, NBA events |
+| 📍 | `https://cdn-icons-png.flaticon.com/512/7763/7763870.png` | Location, address, places |
+
+**Icon Size Classes:**
+- `.basketball-icon.large` - Large decorative icons (header)
+- `.basketball-icon` - Standard size for buttons and cards
+- `.basketball-icon.small` - Small inline icons
+- `.basketball-icon.tiny` - Tiny icons for inline text (locations, tips)
+- `.stat-icon-img` - Special size for statistics grid
 
 ---
 
@@ -337,7 +362,7 @@ function toggleDay(day) {
 - Format large numbers with commas: `131,715`
 
 ### Location Information
-- Include address with 📍 emoji
+- Include address with 📍 icon (Flaticon location marker)
 - Show driving time and distance
 - Note parking availability and cost
 
@@ -345,10 +370,12 @@ function toggleDay(day) {
 - Use 24-hour format: `19:20`
 - Show duration for activities: `13:30-17:00`
 
-### Emoji Usage
-- Consistent emoji for categories (✈️ flights, 🏨 accommodation, 🚗 driving)
-- Basketball emoji (🏀) for NBA-related content
-- Food emojis (🍽️🍕🍸) for dining
+### Icon Usage
+- Consistent icons for categories (see Icon Reference table above)
+- Use Flaticon images instead of emojis for UI elements
+- Icon classes: `.basketball-icon`, `.basketball-icon.small`, `.basketball-icon.tiny`
+- Examples: ✈️ flights, 🏨 accommodation, 🚗 driving, 🏀 NBA events, 📍 locations
+- Food emojis (🍽️🍕🍸) can remain as text emojis in descriptions
 
 ---
 
