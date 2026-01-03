@@ -7,7 +7,7 @@
     border-radius: 25px;
     margin-bottom: 25px;
     box-shadow: 0 10px 30px rgba(107, 163, 216, 0.3);
-    border: 3px solid rgba(255, 255, 255, 0.4);
+    border: 4px solid var(--glossy-silk);
     overflow: hidden;
     color: #fff;
 }

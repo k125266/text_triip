@@ -1,4 +1,4 @@
-/* 住宿頁面 - 清新白色卡片 */
+/* 住宿頁面 - 日系溫暖卡片 */
 .accommodation-compact {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -7,35 +7,36 @@
 }
 
 .acc-card {
-    background: var(--bg-white);
-    border: 2px solid var(--border-light);
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     padding: 25px;
     transition: all 0.3s;
-    box-shadow: 0 4px 12px var(--shadow-soft);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .acc-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(107, 163, 216, 0.25);
-    border-color: var(--mavs-light-blue);
+    box-shadow: 0 12px 28px rgba(215, 196, 187, 0.35);
+    border-color: var(--grayish-cherry);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(215,196,187,0.1) 100%);
 }
 
 .acc-header {
     font-size: 1.5em;
     font-weight: 600;
     margin-bottom: 15px;
-    color: var(--text-dark);
+    color: var(--text-primary);
 }
 
 .acc-card p {
     margin-bottom: 10px;
     line-height: 1.8;
-    color: var(--text-gray);
+    color: var(--text-secondary);
 }
 
 .price-tag {
-    color: var(--mavs-royal-blue);
+    color: var(--mustard);
     font-weight: 600;
     font-size: 1.2em;
     margin-top: 15px;
@@ -46,13 +47,13 @@
     font-size: 1.5em;
     font-weight: 600;
     padding: 20px;
-    background: linear-gradient(135deg, var(--mavs-light-blue), var(--mavs-royal-blue));
+    background: linear-gradient(135deg, var(--wisteria-gray), var(--iron-blue));
     border-radius: 15px;
     color: #fff;
-    box-shadow: 0 4px 15px rgba(0, 83, 188, 0.25);
+    box-shadow: 0 4px 15px rgba(149, 163, 200, 0.35);
 }
 
-/* 提醒頁面 - 清新白色卡片 */
+/* 提醒頁面 - 日系溫暖卡片 */
 .tips-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -60,19 +61,20 @@
 }
 
 .tip-card {
-    background: var(--bg-white);
-    border: 2px solid var(--border-light);
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     padding: 25px;
     text-align: center;
     transition: all 0.3s;
-    box-shadow: 0 4px 12px var(--shadow-soft);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .tip-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 12px 28px rgba(107, 163, 216, 0.25);
-    border-color: var(--mavs-light-blue);
+    box-shadow: 0 12px 28px rgba(170, 188, 191, 0.3);
+    border-color: var(--pale-blue-green);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(170,188,191,0.1) 100%);
 }
 
 .tip-icon {
@@ -84,11 +86,11 @@
     font-size: 1.3em;
     font-weight: 600;
     margin-bottom: 12px;
-    color: var(--text-dark);
+    color: var(--text-primary);
 }
 
 .tip-card p {
-    color: var(--text-gray);
+    color: var(--text-secondary);
     line-height: 1.8;
 }
 

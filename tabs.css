@@ -10,23 +10,23 @@
     flex: 1;
     min-width: 150px;
     padding: 15px 20px;
-    background: var(--bg-white);
-    border: 2px solid var(--border-light);
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
-    color: var(--text-gray);
+    color: var(--text-secondary);
     font-size: 1.1em;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s;
-    box-shadow: 0 2px 8px var(--shadow-soft);
+    box-shadow: 0 2px 8px var(--shadow-color);
 }
 
 .tab-btn:hover {
-    background: var(--bg-white);
-    border-color: var(--mavs-light-blue);
+    background: var(--grayish-cherry);
+    border-color: var(--walnut);
     transform: translateY(-3px);
-    box-shadow: 0 6px 16px rgba(107, 163, 216, 0.2);
-    color: var(--text-dark);
+    box-shadow: 0 6px 16px rgba(145, 123, 109, 0.25);
+    color: var(--text-primary);
 }
 
 .tab-btn.active {
@@ -53,8 +53,8 @@
     border-radius: 25px;
     overflow: hidden;
     margin-bottom: 30px;
-    box-shadow: 0 8px 24px var(--shadow-soft);
-    border: 2px solid var(--border-light);
+    box-shadow: 0 8px 24px var(--shadow-color);
+    border: 3px solid var(--glossy-silk);
 }
 
 .airport-hero img {
@@ -94,18 +94,19 @@
 }
 
 .info-card {
-    background: var(--bg-white);
-    border: 2px solid var(--border-light);
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     overflow: hidden;
     transition: all 0.3s;
-    box-shadow: 0 4px 12px var(--shadow-soft);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .info-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 12px 28px rgba(107, 163, 216, 0.25);
-    border-color: var(--mavs-light-blue);
+    box-shadow: 0 12px 28px rgba(181, 202, 160, 0.3);
+    border-color: var(--young-grass);
+    background: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(181,202,160,0.1) 100%);
 }
 
 .card-header {
@@ -120,13 +121,13 @@
 
 .card-body {
     padding: 20px;
-    color: var(--text-dark);
+    color: var(--text-primary);
 }
 
 .card-body p {
     margin-bottom: 12px;
     font-size: 1.05em;
-    color: var(--text-gray);
+    color: var(--text-secondary);
 }
 
 .card-body p:last-child {
@@ -147,21 +148,21 @@
     text-shadow: 0 2px 10px rgba(0, 83, 188, 0.2);
 }
 
-/* 預算顯示 - 清新白色卡片 */
+/* 預算顯示 - 日系溫暖卡片 */
 .budget-display {
-    background: var(--bg-white);
-    border: 2px solid var(--border-light);
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 12px var(--shadow-soft);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .budget-display h2 {
     font-size: 2em;
     margin-bottom: 25px;
     text-align: center;
-    color: var(--text-dark);
+    color: var(--text-primary);
 }
 
 .budget-compact {
@@ -175,21 +176,23 @@
     align-items: center;
     padding: 15px 20px;
     margin-bottom: 12px;
-    background: var(--bg-light);
+    background: var(--glossy-silk);
     border-radius: 10px;
     font-size: 1.1em;
     transition: all 0.3s;
-    color: var(--text-dark);
+    color: var(--text-primary);
+    border: 1px solid transparent;
 }
 
 .budget-row:hover {
-    background: var(--accent-mint);
+    background: var(--pale-blue-green);
     transform: translateX(5px);
+    border-color: var(--walnut);
 }
 
 .budget-row.total {
-    background: linear-gradient(135deg, var(--mavs-light-blue) 0%, var(--mavs-royal-blue) 100%);
-    border: 2px solid var(--mavs-royal-blue);
+    background: linear-gradient(135deg, var(--wisteria-gray) 0%, var(--iron-blue) 100%);
+    border: 2px solid var(--iron-blue);
     font-weight: bold;
     font-size: 1.3em;
     margin-top: 15px;
@@ -197,7 +200,7 @@
 }
 
 .amount {
-    color: var(--mavs-royal-blue);
+    color: var(--mustard);
     font-weight: 600;
 }
 
@@ -211,8 +214,8 @@
     border-radius: 25px;
     overflow: hidden;
     margin-bottom: 30px;
-    box-shadow: 0 8px 24px var(--shadow-soft);
-    border: 2px solid var(--border-light);
+    box-shadow: 0 8px 24px var(--shadow-color);
+    border: 3px solid var(--walnut);
     min-height: 500px;
 }
 
@@ -268,9 +271,9 @@
 
 .stat-item:hover {
     background: rgba(255, 255, 255, 1);
-    border-color: var(--mavs-light-blue);
+    border-color: var(--young-grass);
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(107, 163, 216, 0.4);
+    box-shadow: 0 15px 35px rgba(181, 202, 160, 0.4);
 }
 
 .stat-icon {
@@ -286,7 +289,7 @@
 .stat-value {
     font-size: 1.1em;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-primary);
 }
 
 /* 旅程時間軸 - 雜誌風格 */
@@ -298,7 +301,7 @@
     font-size: 2.2em;
     margin-bottom: 30px;
     text-align: center;
-    color: var(--text-dark);
+    color: var(--text-primary);
 }
 
 .journey-cards {
@@ -314,14 +317,14 @@
     min-height: 350px;
     cursor: pointer;
     transition: all 0.4s;
-    box-shadow: 0 8px 24px var(--shadow-soft);
-    border: 2px solid var(--border-light);
+    box-shadow: 0 8px 24px var(--shadow-color);
+    border: 3px solid var(--glossy-silk);
 }
 
 .journey-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 16px 40px rgba(107, 163, 216, 0.3);
-    border-color: var(--mavs-light-blue);
+    box-shadow: 0 16px 40px rgba(149, 163, 200, 0.4);
+    border-color: var(--wisteria-gray);
 }
 
 .journey-bg {
@@ -353,7 +356,7 @@
 
 .journey-days {
     font-size: 1em;
-    color: #FFA500;
+    color: var(--mustard);
     font-weight: bold;
     margin-bottom: 8px;
     text-transform: uppercase;
@@ -375,29 +378,31 @@
 }
 
 .highlight-badge {
-    background: rgba(107, 163, 216, 0.9);
+    background: rgba(181, 202, 160, 0.9);
     backdrop-filter: blur(10px);
-    color: #fff;
+    color: var(--iron-blue);
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 0.9em;
     border: 1px solid rgba(255, 255, 255, 0.5);
     transition: all 0.3s;
+    font-weight: 600;
 }
 
 .highlight-badge:hover {
-    background: var(--mavs-royal-blue);
-    border-color: var(--mavs-royal-blue);
+    background: var(--young-grass);
+    border-color: var(--walnut);
+    color: var(--iron-blue);
 }
 
-/* 天氣提醒 - 清新白色卡片 */
+/* 天氣提醒 - 日系白色卡片 */
 .weather-reminder {
-    background: var(--bg-white);
-    border: 2px solid var(--border-light);
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
-    box-shadow: 0 4px 12px var(--shadow-soft);
+    box-shadow: 0 4px 12px var(--shadow-color);
 }
 
 .weather-grid {
@@ -407,8 +412,8 @@
 }
 
 .weather-item {
-    background: var(--bg-light);
-    border: 2px solid var(--border-light);
+    background: var(--glossy-silk);
+    border: 2px solid var(--border-color);
     border-radius: 15px;
     padding: 25px;
     text-align: center;
@@ -416,10 +421,10 @@
 }
 
 .weather-item:hover {
-    background: var(--accent-mint);
-    border-color: var(--mavs-light-blue);
+    background: var(--pale-blue-green);
+    border-color: var(--young-grass);
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(107, 163, 216, 0.25);
+    box-shadow: 0 8px 20px rgba(170, 188, 191, 0.35);
 }
 
 .weather-icon {
@@ -429,14 +434,14 @@
 
 .weather-label {
     font-size: 1.1em;
-    color: var(--text-gray);
+    color: var(--text-secondary);
     margin-bottom: 10px;
 }
 
 .weather-value {
     font-size: 1.2em;
     font-weight: 600;
-    color: var(--text-dark);
+    color: var(--text-primary);
 }
 
 /* 手機版響應式 */

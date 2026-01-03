@@ -7,23 +7,36 @@
     --mavs-navy-blue: #002B5C;
     --mavs-light-blue: #6BA3D8;
 
-    /* 日系清新主色調 */
-    --bg-light: #F8F9FA;
-    --bg-white: #FFFFFF;
-    --bg-cream: #FEFDFB;
-    --text-dark: #2C3E50;
-    --text-gray: #5A6C7D;
-    --text-light: #8B9DAF;
+    /* === 日系傳統色配色系統 === */
 
-    /* 清新強調色 */
-    --accent-pink: #FFB6C1;
-    --accent-mint: #B4E7CE;
-    --accent-lavender: #D4C5F9;
-    --accent-peach: #FFDAB9;
+    /* 基底色 (Background & Base) */
+    --ecru: #F4F4F0;              /* 生成色 - 天然棉麻色，主背景 */
+    --glossy-silk: #EBE6D8;       /* 練色 - 泛黃紙張色，次要背景 */
+    --bg-white: #FFFFFF;          /* 純白 - 卡片使用 */
 
-    /* 中性灰階 */
-    --border-light: #E8ECEF;
-    --shadow-soft: rgba(44, 62, 80, 0.08);
+    /* 自然系主色 (Nature & Freshness) */
+    --young-grass: #B5CAA0;       /* 若草色 - 春天嫩草綠 */
+    --pale-blue-green: #AABCBF;   /* 水淺蔥 - 清晨湖水色 */
+    --grayish-cherry: #D7C4BB;    /* 灰櫻 - 成熟優雅粉 */
+    --wisteria-gray: #95A3C8;     /* 藤鼠 - 神秘淡紫色 */
+
+    /* 大地與強調色 (Earth & Accents) */
+    --mustard: #D8CA86;           /* 辛子色 - 芥末黃，點睛之筆 */
+    --walnut: #917B6D;            /* 胡桃色 - 溫暖淺棕 */
+    --neutral-gray: #727171;      /* 素鼠 - 柔和深灰 */
+    --iron-blue: #2F3A4C;         /* 鐵御納戶 - 知性深藍灰 */
+
+    /* 語義化別名 (方便使用) */
+    --bg-main: var(--ecru);
+    --bg-card: var(--bg-white);
+    --bg-secondary: var(--glossy-silk);
+    --text-primary: var(--iron-blue);
+    --text-secondary: var(--neutral-gray);
+    --text-tertiary: var(--walnut);
+    --accent-primary: var(--mustard);
+    --accent-nature: var(--young-grass);
+    --border-color: rgba(145, 123, 109, 0.2);
+    --shadow-color: rgba(47, 58, 76, 0.08);
 }
 
 /* 籃球圖示樣式 */
@@ -67,37 +80,37 @@ html {
     width: 100%;
 }
 
-/* 自定義滾動條 - 清新灰色調 */
+/* 自定義滾動條 - 日系灰棕色調 */
 ::-webkit-scrollbar {
     width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--bg-light);
+    background: var(--ecru);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #C8D3DC 0%, #A8B9C7 100%);
+    background: linear-gradient(180deg, var(--walnut) 0%, var(--neutral-gray) 100%);
     border-radius: 10px;
-    border: 2px solid var(--bg-light);
+    border: 2px solid var(--ecru);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #A8B9C7 0%, #8B9DAF 100%);
+    background: var(--iron-blue);
 }
 
 /* Firefox 滾動條 */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #C8D3DC var(--bg-light);
+    scrollbar-color: var(--walnut) var(--ecru);
 }
 
-/* Body 樣式 - 清新淺色背景 */
+/* Body 樣式 - 日系溫暖背景 */
 body {
     font-family: Verdana, 'Noto Serif TC', serif;
-    background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-light) 100%);
+    background: linear-gradient(135deg, var(--ecru) 0%, var(--glossy-silk) 50%, var(--ecru) 100%);
     background-attachment: fixed;
-    color: var(--text-dark);
+    color: var(--text-primary);
     min-height: 100vh;
     line-height: 1.6;
     margin: 0;
