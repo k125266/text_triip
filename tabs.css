@@ -193,91 +193,190 @@
     font-weight: bold;
 }
 
-/* 統計卡片樣式 */
-.stat-card .card-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 80px;
-}
-
-.stat-number {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #FFA500;
-    text-align: center;
-    text-shadow: 0 2px 10px rgba(255, 165, 0, 0.5);
-}
-
-.stat-unit {
-    font-size: 0.5em;
-    color: var(--mavs-silver);
-    margin-left: 3px;
-    margin-right: 8px;
-}
-
-/* 旅程時間軸 */
-.trip-timeline {
-    background: linear-gradient(135deg, rgba(0, 43, 92, 0.6) 0%, rgba(0, 43, 92, 0.4) 100%);
-    border: 2px solid rgba(0, 83, 188, 0.4);
-    border-radius: 20px;
-    padding: 30px;
+/* 統計數據英雄區塊 */
+.stats-hero {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
     margin-bottom: 30px;
+    box-shadow: 0 15px 50px rgba(0, 83, 188, 0.6);
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    min-height: 500px;
 }
 
-.trip-timeline h2 {
-    font-size: 2em;
-    margin-bottom: 25px;
+.stats-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(0.4);
+}
+
+.stats-overlay {
+    position: relative;
+    z-index: 2;
+    padding: 60px 40px;
     text-align: center;
-    color: var(--mavs-royal-blue);
 }
 
-.timeline-grid {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 15px;
+.hero-title {
+    font-size: 3.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
-.timeline-item {
-    flex: 1;
-    background: rgba(0, 83, 188, 0.2);
-    border: 2px solid rgba(0, 83, 188, 0.4);
+.hero-subtitle {
+    font-size: 1.5em;
+    color: #FFA500;
+    margin-bottom: 50px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-item {
+    background: rgba(0, 43, 92, 0.85);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(0, 83, 188, 0.6);
     border-radius: 15px;
-    padding: 20px;
+    padding: 20px 15px;
     text-align: center;
     transition: all 0.3s;
 }
 
-.timeline-item:hover {
-    background: rgba(0, 83, 188, 0.35);
-    border-color: var(--mavs-royal-blue);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 83, 188, 0.5);
+.stat-item:hover {
+    background: rgba(0, 83, 188, 0.9);
+    border-color: #FFA500;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 165, 0, 0.6);
 }
 
-.timeline-days {
+.stat-icon {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.stat-icon-img {
+    width: 40px;
+    height: 40px;
+}
+
+.stat-value {
     font-size: 1.1em;
-    color: var(--mavs-silver);
-    margin-bottom: 8px;
-}
-
-.timeline-city {
-    font-size: 1.8em;
     font-weight: bold;
-    color: #FFA500;
-    margin-bottom: 8px;
-}
-
-.timeline-highlight {
-    font-size: 0.95em;
     color: #fff;
 }
 
-.timeline-arrow {
-    font-size: 1.5em;
-    color: var(--mavs-royal-blue);
+/* 旅程時間軸 - 雜誌風格 */
+.journey-timeline {
+    margin-bottom: 30px;
+}
+
+.section-title {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #FFA500;
+    text-shadow: 0 2px 10px rgba(255, 165, 0, 0.5);
+}
+
+.journey-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.journey-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    min-height: 350px;
+    cursor: pointer;
+    transition: all 0.4s;
+    box-shadow: 0 10px 30px rgba(0, 83, 188, 0.5);
+    border: 3px solid rgba(0, 83, 188, 0.4);
+}
+
+.journey-card:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 50px rgba(255, 165, 0, 0.6);
+    border-color: #FFA500;
+}
+
+.journey-bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(0.6);
+    transition: all 0.4s;
+}
+
+.journey-card:hover .journey-bg {
+    filter: brightness(0.8);
+    transform: scale(1.1);
+}
+
+.journey-overlay {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 100%);
+}
+
+.journey-days {
+    font-size: 1em;
+    color: #FFA500;
     font-weight: bold;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.journey-city {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+}
+
+.journey-highlights {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.highlight-badge {
+    background: rgba(0, 83, 188, 0.85);
+    backdrop-filter: blur(10px);
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.9em;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s;
+}
+
+.highlight-badge:hover {
+    background: #FFA500;
+    border-color: #FFA500;
 }
 
 /* 天氣提醒 */
@@ -287,13 +386,6 @@
     border-radius: 20px;
     padding: 30px;
     margin-bottom: 30px;
-}
-
-.weather-reminder h2 {
-    font-size: 2em;
-    margin-bottom: 25px;
-    text-align: center;
-    color: var(--mavs-royal-blue);
 }
 
 .weather-grid {
@@ -389,44 +481,53 @@
         font-size: 1.1em;
     }
 
-    /* 統計卡片 */
-    .stat-number {
+    /* 統計數據英雄區塊 */
+    .stats-hero {
+        min-height: 400px;
+    }
+    .stats-overlay {
+        padding: 40px 25px;
+    }
+    .hero-title {
+        font-size: 2.5em;
+    }
+    .hero-subtitle {
+        font-size: 1.2em;
+        margin-bottom: 30px;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+    .stat-icon {
         font-size: 2em;
+    }
+    .stat-value {
+        font-size: 0.95em;
     }
 
     /* 旅程時間軸 */
-    .trip-timeline {
-        padding: 20px;
+    .section-title {
+        font-size: 1.8em;
+        margin-bottom: 20px;
     }
-    .trip-timeline h2 {
-        font-size: 1.5em;
-        margin-bottom: 15px;
+    .journey-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
-    .timeline-grid {
-        flex-direction: column;
-        gap: 10px;
+    .journey-card {
+        min-height: 300px;
     }
-    .timeline-arrow {
-        transform: rotate(90deg);
-        font-size: 1.2em;
+    .journey-overlay {
+        padding: 25px;
     }
-    .timeline-days {
-        font-size: 1em;
-    }
-    .timeline-city {
-        font-size: 1.5em;
-    }
-    .timeline-highlight {
-        font-size: 0.9em;
+    .journey-city {
+        font-size: 2em;
     }
 
     /* 天氣提醒 */
     .weather-reminder {
         padding: 20px;
-    }
-    .weather-reminder h2 {
-        font-size: 1.5em;
-        margin-bottom: 15px;
     }
     .weather-grid {
         grid-template-columns: 1fr;
@@ -499,45 +600,66 @@
         margin-top: 10px;
     }
 
-    /* 統計卡片 */
-    .stat-number {
-        font-size: 1.8em;
+    /* 統計數據英雄區塊 */
+    .stats-hero {
+        min-height: 350px;
+        border-radius: 20px;
     }
-    .stat-unit {
-        font-size: 0.45em;
+    .stats-overlay {
+        padding: 30px 20px;
+    }
+    .hero-title {
+        font-size: 2em;
+    }
+    .hero-subtitle {
+        font-size: 1em;
+        margin-bottom: 25px;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+    .stat-item {
+        padding: 15px 10px;
+    }
+    .stat-icon {
+        font-size: 1.8em;
+        margin-bottom: 8px;
+    }
+    .stat-icon-img {
+        width: 30px;
+        height: 30px;
+    }
+    .stat-value {
+        font-size: 0.9em;
     }
 
     /* 旅程時間軸 */
-    .trip-timeline {
-        padding: 15px;
+    .section-title {
+        font-size: 1.5em;
+        margin-bottom: 15px;
     }
-    .trip-timeline h2 {
-        font-size: 1.3em;
-        margin-bottom: 12px;
+    .journey-card {
+        min-height: 250px;
+        border-radius: 15px;
     }
-    .timeline-item {
-        padding: 15px;
+    .journey-overlay {
+        padding: 20px;
     }
-    .timeline-days {
+    .journey-days {
         font-size: 0.9em;
     }
-    .timeline-city {
-        font-size: 1.3em;
+    .journey-city {
+        font-size: 1.8em;
     }
-    .timeline-highlight {
+    .highlight-badge {
         font-size: 0.85em;
-    }
-    .timeline-arrow {
-        font-size: 1em;
+        padding: 6px 12px;
     }
 
     /* 天氣提醒 */
     .weather-reminder {
         padding: 15px;
-    }
-    .weather-reminder h2 {
-        font-size: 1.3em;
-        margin-bottom: 12px;
     }
     .weather-item {
         padding: 20px;

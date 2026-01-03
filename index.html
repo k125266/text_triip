@@ -52,78 +52,84 @@
         </nav>
 
         <div id="overview" class="tab-content active">
-            <div class="compact-grid">
-                <div class="info-card scroll-reveal scroll-reveal-delay-1">
-                    <div class="card-header"><img src="https://cdn-icons-png.flaticon.com/512/8777/8777970.png" alt="Money" class="basketball-icon"> 匯率</div>
-                    <div class="card-body">
-                        <div class="big-number">$1 ≈ NTD 32</div>
-                    </div>
-                </div>
-                <div class="info-card stat-card scroll-reveal scroll-reveal-delay-2">
-                    <div class="card-header">📅 旅程天數</div>
-                    <div class="card-body">
-                        <div class="stat-number">8<span class="stat-unit">天</span>7<span class="stat-unit">夜</span></div>
-                    </div>
-                </div>
-                <div class="info-card stat-card scroll-reveal scroll-reveal-delay-3">
-                    <div class="card-header">🚗 總行駛里程</div>
-                    <div class="card-body">
-                        <div class="stat-number">875<span class="stat-unit">km</span></div>
-                    </div>
-                </div>
-                <div class="info-card stat-card scroll-reveal scroll-reveal-delay-4">
-                    <div class="card-header">🏙️ 造訪城市</div>
-                    <div class="card-body">
-                        <div class="stat-number">3<span class="stat-unit">座</span></div>
-                    </div>
-                </div>
-                <div class="info-card stat-card scroll-reveal scroll-reveal-delay-5">
-                    <div class="card-header">🏀 NBA賽事</div>
-                    <div class="card-body">
-                        <div class="stat-number">1<span class="stat-unit">場</span></div>
-                    </div>
-                </div>
-                <div class="info-card stat-card scroll-reveal scroll-reveal-delay-6">
-                    <div class="card-header">🏨 住宿地點</div>
-                    <div class="card-body">
-                        <div class="stat-number">3<span class="stat-unit">處</span></div>
+            <!-- 統計數據英雄區塊 -->
+            <div class="stats-hero scroll-reveal-scale">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyB6oh1t24QQZDizxbU8I8XjBX5wy6L0t9-hYcF2QlfQ&s=10" alt="Texas Landscape" class="stats-bg">
+                <div class="stats-overlay">
+                    <h1 class="hero-title">德州籃球之旅</h1>
+                    <p class="hero-subtitle">8天7夜精彩旅程 · 2026/2/26-3/5</p>
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-icon">📅</div>
+                            <div class="stat-value">8天7夜</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🚗</div>
+                            <div class="stat-value">875 km</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🏙️</div>
+                            <div class="stat-value">3座城市</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🏀</div>
+                            <div class="stat-value">1場NBA</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">🏨</div>
+                            <div class="stat-value">3處住宿</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><img src="https://cdn-icons-png.flaticon.com/512/8777/8777970.png" alt="Money" class="stat-icon-img"></div>
+                            <div class="stat-value">$1≈32</div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 旅程時間軸 -->
-            <div class="trip-timeline scroll-reveal">
-                <h2>🗓️ 旅程時間軸</h2>
-                <div class="timeline-grid">
-                    <div class="timeline-item">
-                        <div class="timeline-days">Day 1-4</div>
-                        <div class="timeline-city">Dallas</div>
-                        <div class="timeline-highlight">獨行俠主場 · NBA觀賽</div>
+            <!-- 旅程時間軸 - 雜誌風格 -->
+            <div class="journey-timeline scroll-reveal">
+                <h2 class="section-title">🗓️ 旅程規劃</h2>
+                <div class="journey-cards">
+                    <div class="journey-card dallas-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVVUBEj3ZoyKApLeB1Yh28JhvD8uNChUkfcqKy2fE9HQ&s=10" alt="Dallas" class="journey-bg">
+                        <div class="journey-overlay">
+                            <div class="journey-days">Day 1-4</div>
+                            <div class="journey-city">Dallas</div>
+                            <div class="journey-highlights">
+                                <span class="highlight-badge">🏀 NBA觀賽</span>
+                                <span class="highlight-badge">🏛️ 博物館</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="timeline-arrow">→</div>
-                    <div class="timeline-item">
-                        <div class="timeline-days">Day 5</div>
-                        <div class="timeline-city">Austin</div>
-                        <div class="timeline-highlight">音樂之都 · Magnolia Market</div>
+                    <div class="journey-card austin-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAd3n4BHNeC7astJvhbg6kJWXl2a4F-hRB0WEkcml24w&s=10" alt="Austin" class="journey-bg">
+                        <div class="journey-overlay">
+                            <div class="journey-days">Day 5</div>
+                            <div class="journey-city">Austin</div>
+                            <div class="journey-highlights">
+                                <span class="highlight-badge">🎸 音樂之都</span>
+                                <span class="highlight-badge">🌸 Magnolia</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="timeline-arrow">→</div>
-                    <div class="timeline-item">
-                        <div class="timeline-days">Day 6-7</div>
-                        <div class="timeline-city">San Antonio</div>
-                        <div class="timeline-highlight">河濱步道 · The Alamo</div>
-                    </div>
-                    <div class="timeline-arrow">→</div>
-                    <div class="timeline-item">
-                        <div class="timeline-days">Day 8</div>
-                        <div class="timeline-city">返程</div>
-                        <div class="timeline-highlight">Dallas → 台北</div>
+                    <div class="journey-card sanantonio-card">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpD6kFjOtJKM4Ya0JhU1rJLKpUsYGnhwz-ibcdDlUPYw&s=10" alt="San Antonio" class="journey-bg">
+                        <div class="journey-overlay">
+                            <div class="journey-days">Day 6-7</div>
+                            <div class="journey-city">San Antonio</div>
+                            <div class="journey-highlights">
+                                <span class="highlight-badge">🌊 River Walk</span>
+                                <span class="highlight-badge">🏰 The Alamo</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 天氣提醒 -->
+            <!-- 天氣資訊 -->
             <div class="weather-reminder scroll-reveal">
-                <h2>🌤️ 天氣資訊</h2>
+                <h2 class="section-title">🌤️ 天氣資訊</h2>
                 <div class="weather-grid">
                     <div class="weather-item">
                         <div class="weather-icon">🌡️</div>
