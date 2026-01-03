@@ -1,4 +1,4 @@
-/* 行程頁面 */
+/* 行程頁面 - 清新白色卡片 */
 .days-overview {
     display: flex;
     flex-direction: column;
@@ -6,13 +6,14 @@
 }
 
 .day-card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 3px solid rgba(0, 83, 188, 0.3);
-    border-radius: 25px;
+    background: var(--bg-white);
+    border: 2px solid var(--border-light);
+    border-radius: 20px;
     overflow: hidden;
     cursor: pointer;
     transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
+    box-shadow: 0 4px 12px var(--shadow-soft);
 }
 
 .day-card::before {
@@ -22,7 +23,7 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    background: linear-gradient(90deg, transparent, rgba(107, 163, 216, 0.1), transparent);
     transition: left 0.5s;
 }
 
@@ -32,21 +33,20 @@
 
 .day-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 40px rgba(0, 83, 188, 0.5);
-    border-color: var(--mavs-royal-blue);
-    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 28px rgba(107, 163, 216, 0.25);
+    border-color: var(--mavs-light-blue);
 }
 
 .day-card.expanded {
-    box-shadow: 0 20px 50px rgba(0, 83, 188, 0.6);
+    box-shadow: 0 16px 40px rgba(107, 163, 216, 0.3);
     border-color: var(--mavs-royal-blue);
-    background: rgba(255, 255, 255, 0.06);
 }
 
+/* NBA 卡片 - 保留藍色主題 */
 .day-card.nba-card {
-    background: rgba(255, 165, 0, 0.08);
-    border: 3px solid #FFA500;
-    box-shadow: 0 0 30px rgba(255, 165, 0, 0.3);
+    background: linear-gradient(135deg, rgba(107, 163, 216, 0.15), rgba(0, 83, 188, 0.1));
+    border: 3px solid var(--mavs-royal-blue);
+    box-shadow: 0 8px 24px rgba(0, 83, 188, 0.3);
 }
 
 .day-card-header {
@@ -54,7 +54,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 20px 25px;
-    background: linear-gradient(135deg, rgba(0, 83, 188, 0.4) 0%, rgba(0, 43, 92, 0.6) 100%);
+    background: linear-gradient(135deg, var(--bg-light), rgba(232, 236, 239, 0.5));
 }
 
 .day-card-title {
@@ -64,24 +64,27 @@
 }
 
 .day-badge {
-    background: linear-gradient(135deg, var(--mavs-royal-blue) 0%, #0066CC 100%);
+    background: linear-gradient(135deg, var(--mavs-light-blue) 0%, var(--mavs-royal-blue) 100%);
     padding: 10px 18px;
-    border-radius: 25px;
-    font-weight: bold;
+    border-radius: 20px;
+    font-weight: 600;
     font-size: 1.1em;
-    box-shadow: 0 4px 15px rgba(0, 83, 188, 0.4);
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 3px 10px rgba(0, 83, 188, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    color: #fff;
 }
 
+/* NBA Badge - 保留特殊強調 */
 .day-badge.nba-badge {
-    background: linear-gradient(135deg, #FFA500 0%, #FF8C00 100%);
+    background: linear-gradient(135deg, var(--mavs-royal-blue) 0%, var(--mavs-navy-blue) 100%);
     animation: basketball-bounce 1s ease-in-out infinite;
-    border-color: rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 15px rgba(0, 83, 188, 0.4);
 }
 
 .day-info {
     font-size: 1.15em;
-    color: var(--mavs-silver);
+    color: var(--text-gray);
 }
 
 .expand-icon {
@@ -105,10 +108,10 @@
 
 .day-card-inner {
     padding: 30px 25px;
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--bg-light);
 }
 
-/* 時間軸設計 */
+/* 時間軸設計 - 清新配色 */
 .timeline-container {
     position: relative;
 }
@@ -129,20 +132,20 @@
 .time-circle {
     width: 20px;
     height: 20px;
-    background: linear-gradient(135deg, var(--mavs-royal-blue), #0066CC);
-    border: 4px solid rgba(255, 255, 255, 0.9);
+    background: linear-gradient(135deg, var(--mavs-light-blue), var(--mavs-royal-blue));
+    border: 4px solid #fff;
     border-radius: 50%;
     position: absolute;
     right: -10px;
     top: 5px;
-    box-shadow: 0 2px 10px rgba(0, 83, 188, 0.4);
+    box-shadow: 0 2px 10px rgba(0, 83, 188, 0.2);
 }
 
 .time-text {
     font-size: 1.1em;
-    font-weight: bold;
+    font-weight: 600;
     color: var(--mavs-royal-blue);
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(107, 163, 216, 0.1);
     padding: 4px 8px;
     border-radius: 8px;
     display: inline-block;
@@ -150,91 +153,99 @@
 
 .timeline-line {
     width: 4px;
-    background: linear-gradient(to bottom, var(--mavs-royal-blue), rgba(0, 83, 188, 0.3));
+    background: linear-gradient(to bottom, var(--mavs-light-blue), rgba(232, 236, 239, 0.5));
     position: relative;
 }
 
 .timeline-line-last {
-    background: linear-gradient(to bottom, var(--mavs-royal-blue), transparent);
+    background: linear-gradient(to bottom, var(--mavs-light-blue), transparent);
 }
 
 .timeline-content {
-    background: rgba(255, 255, 255, 0.05);
+    background: var(--bg-white);
     padding: 20px;
-    border-radius: 20px;
-    border: 2px solid rgba(0, 83, 188, 0.3);
+    border-radius: 15px;
+    border: 2px solid var(--border-light);
     transition: all 0.3s;
     position: relative;
+    box-shadow: 0 2px 8px var(--shadow-soft);
 }
 
 .timeline-content:hover {
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--bg-white);
     transform: translateY(-3px);
-    border-color: var(--mavs-royal-blue);
-    box-shadow: 0 8px 20px rgba(0, 83, 188, 0.3);
+    border-color: var(--mavs-light-blue);
+    box-shadow: 0 6px 16px rgba(107, 163, 216, 0.2);
 }
 
 .timeline-title {
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 10px;
-    color: #FFF;
+    color: var(--text-dark);
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
 .timeline-desc {
-    color: var(--mavs-silver);
+    color: var(--text-gray);
     margin-bottom: 10px;
     line-height: 1.8;
 }
 
 .timeline-price {
-    color: #FFA500;
-    font-weight: bold;
+    color: var(--mavs-royal-blue);
+    font-weight: 600;
     margin-top: 10px;
     font-size: 1.05em;
-    background: rgba(255, 165, 0, 0.1);
+    background: rgba(107, 163, 216, 0.1);
     padding: 6px 12px;
-    border-radius: 12px;
+    border-radius: 10px;
     display: inline-block;
 }
 
-/* NBA 特殊樣式 */
+/* NBA 特殊樣式 - 保留籃球藍色主題 */
 .nba-timeline-item .timeline-content {
-    background: linear-gradient(135deg, rgba(255, 165, 0, 0.3) 0%, rgba(0, 83, 188, 0.4) 100%);
-    border-left-color: #FFA500;
-    border-left-width: 6px;
+    background: linear-gradient(135deg, rgba(107, 163, 216, 0.2), rgba(0, 83, 188, 0.15));
+    border-left-color: var(--mavs-royal-blue);
+    border-left-width: 5px;
+    box-shadow: 0 4px 15px rgba(0, 83, 188, 0.2);
 }
 
 .nba-timeline-item .time-circle {
-    background: #FFA500;
-    border-color: var(--mavs-royal-blue);
+    background: var(--mavs-royal-blue);
+    border-color: #fff;
     animation: basketball-spin 3s linear infinite;
+    box-shadow: 0 0 15px rgba(0, 83, 188, 0.5);
 }
 
 .return-timeline-item .timeline-content {
-    background: linear-gradient(135deg, rgba(187, 196, 202, 0.3) 0%, rgba(0, 43, 92, 0.4) 100%);
+    background: linear-gradient(135deg, rgba(232, 236, 239, 0.8), rgba(248, 249, 250, 0.5));
+    border-left-color: var(--text-light);
+    border-left-width: 4px;
 }
 
-/* 當日預算 */
+/* 當日預算 - 清新配色 */
 .day-budget-footer {
     margin-top: 25px;
     padding: 20px;
-    background: linear-gradient(135deg, rgba(0, 83, 188, 0.4) 0%, rgba(0, 43, 92, 0.5) 100%);
+    background: linear-gradient(135deg, var(--mavs-light-blue), var(--mavs-royal-blue));
     border-radius: 15px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
-    font-weight: bold;
-    border: 2px solid rgba(255, 165, 0, 0.5);
+    font-weight: 600;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 83, 188, 0.3);
 }
 
 .budget-amount-large {
-    color: #FFA500;
+    color: #fff;
     font-size: 1.5em;
+    font-weight: bold;
 }
 
 /* 手機版響應式 */

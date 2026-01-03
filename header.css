@@ -1,14 +1,15 @@
-/* 標題區 */
+/* 標題區 - 保留籃球藍色作為主題點綴 */
 .compact-header {
     position: relative;
     text-align: center;
     padding: 40px 20px;
-    background: linear-gradient(135deg, var(--mavs-navy-blue) 0%, var(--mavs-royal-blue) 50%, #0066CC 100%);
+    background: linear-gradient(135deg, var(--mavs-light-blue) 0%, var(--mavs-royal-blue) 100%);
     border-radius: 25px;
     margin-bottom: 25px;
-    box-shadow: 0 15px 50px rgba(0, 83, 188, 0.5);
-    border: 4px solid var(--mavs-royal-blue);
+    box-shadow: 0 10px 30px rgba(107, 163, 216, 0.3);
+    border: 3px solid rgba(255, 255, 255, 0.4);
     overflow: hidden;
+    color: #fff;
 }
 
 /* 旅行裝飾元素 */

@@ -1,11 +1,29 @@
-/* Dallas Mavericks 官方色號 */
+/* 日系清新配色 + Dallas Mavericks 籃球元素點綴 */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
 
 :root {
+    /* 籃球主題色（保留獨行俠配色作為點綴） */
     --mavs-royal-blue: #0053BC;
     --mavs-navy-blue: #002B5C;
-    --mavs-silver: #BBC4CA;
-    --mavs-black: #061922;
+    --mavs-light-blue: #6BA3D8;
+
+    /* 日系清新主色調 */
+    --bg-light: #F8F9FA;
+    --bg-white: #FFFFFF;
+    --bg-cream: #FEFDFB;
+    --text-dark: #2C3E50;
+    --text-gray: #5A6C7D;
+    --text-light: #8B9DAF;
+
+    /* 清新強調色 */
+    --accent-pink: #FFB6C1;
+    --accent-mint: #B4E7CE;
+    --accent-lavender: #D4C5F9;
+    --accent-peach: #FFDAB9;
+
+    /* 中性灰階 */
+    --border-light: #E8ECEF;
+    --shadow-soft: rgba(44, 62, 80, 0.08);
 }
 
 /* 籃球圖示樣式 */
@@ -49,37 +67,37 @@ html {
     width: 100%;
 }
 
-/* 自定義滾動條 */
+/* 自定義滾動條 - 清新灰色調 */
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-    background: rgba(0, 43, 92, 0.3);
+    background: var(--bg-light);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #0053BC 0%, rgba(0, 83, 188, 0.7) 100%);
+    background: linear-gradient(180deg, #C8D3DC 0%, #A8B9C7 100%);
     border-radius: 10px;
-    border: 2px solid rgba(0, 43, 92, 0.3);
+    border: 2px solid var(--bg-light);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #0066CC 0%, #0053BC 100%);
+    background: linear-gradient(180deg, #A8B9C7 0%, #8B9DAF 100%);
 }
 
 /* Firefox 滾動條 */
 * {
     scrollbar-width: thin;
-    scrollbar-color: #0053BC rgba(0, 43, 92, 0.3);
+    scrollbar-color: #C8D3DC var(--bg-light);
 }
 
-/* Body 樣式 */
+/* Body 樣式 - 清新淺色背景 */
 body {
     font-family: Verdana, 'Noto Serif TC', serif;
-    background: linear-gradient(135deg, var(--mavs-black) 0%, var(--mavs-navy-blue) 100%);
+    background: linear-gradient(135deg, var(--bg-cream) 0%, var(--bg-light) 100%);
     background-attachment: fixed;
-    color: #fff;
+    color: var(--text-dark);
     min-height: 100vh;
     line-height: 1.6;
     margin: 0;
@@ -162,11 +180,11 @@ body {
 .scroll-reveal-delay-6 { transition-delay: 0.6s; }
 
 @keyframes pulse-glow {
-    0%, 100% { 
-        box-shadow: 0 0 20px rgba(255, 165, 0, 0.5); 
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(0, 83, 188, 0.4);
     }
-    50% { 
-        box-shadow: 0 0 40px rgba(255, 165, 0, 0.8); 
+    50% {
+        box-shadow: 0 0 40px rgba(0, 83, 188, 0.6);
     }
 }
 

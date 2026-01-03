@@ -1,4 +1,4 @@
-/* 住宿頁面 */
+/* 住宿頁面 - 清新白色卡片 */
 .accommodation-compact {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -7,39 +7,36 @@
 }
 
 .acc-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(0, 83, 188, 0.3);
-    border-radius: 25px;
+    background: var(--bg-white);
+    border: 2px solid var(--border-light);
+    border-radius: 20px;
     padding: 25px;
     transition: all 0.3s;
+    box-shadow: 0 4px 12px var(--shadow-soft);
 }
 
 .acc-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0, 83, 188, 0.4);
-    border-color: var(--mavs-royal-blue);
-    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 28px rgba(107, 163, 216, 0.25);
+    border-color: var(--mavs-light-blue);
 }
 
 .acc-header {
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 15px;
-    color: #FFA500;
-    background: rgba(255, 165, 0, 0.1);
-    padding: 8px 15px;
-    border-radius: 15px;
-    display: inline-block;
+    color: var(--text-dark);
 }
 
 .acc-card p {
     margin-bottom: 10px;
     line-height: 1.8;
+    color: var(--text-gray);
 }
 
 .price-tag {
-    color: #FFA500;
-    font-weight: bold;
+    color: var(--mavs-royal-blue);
+    font-weight: 600;
     font-size: 1.2em;
     margin-top: 15px;
 }
@@ -47,14 +44,15 @@
 .total-acc {
     text-align: center;
     font-size: 1.5em;
-    font-weight: bold;
+    font-weight: 600;
     padding: 20px;
-    background: linear-gradient(135deg, var(--mavs-royal-blue) 0%, rgba(0, 83, 188, 0.8) 100%);
+    background: linear-gradient(135deg, var(--mavs-light-blue), var(--mavs-royal-blue));
     border-radius: 15px;
-    color: #FFA500;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(0, 83, 188, 0.25);
 }
 
-/* 提醒頁面 */
+/* 提醒頁面 - 清新白色卡片 */
 .tips-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -62,41 +60,50 @@
 }
 
 .tip-card {
-    background: rgba(255, 255, 255, 0.05);
-    border: 2px solid rgba(0, 83, 188, 0.3);
-    border-radius: 25px;
+    background: var(--bg-white);
+    border: 2px solid var(--border-light);
+    border-radius: 20px;
     padding: 25px;
     text-align: center;
     transition: all 0.3s;
+    box-shadow: 0 4px 12px var(--shadow-soft);
 }
 
 .tip-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(0, 83, 188, 0.4);
-    border-color: var(--mavs-royal-blue);
-    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 12px 28px rgba(107, 163, 216, 0.25);
+    border-color: var(--mavs-light-blue);
 }
 
 .tip-icon {
     font-size: 3em;
     margin-bottom: 15px;
-    filter: drop-shadow(0 4px 8px rgba(0, 83, 188, 0.3));
 }
 
 .tip-title {
     font-size: 1.3em;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 12px;
-    color: #FFA500;
-    background: rgba(255, 165, 0, 0.1);
-    padding: 6px 12px;
-    border-radius: 12px;
-    display: inline-block;
+    color: var(--text-dark);
 }
 
 .tip-card p {
-    color: var(--mavs-silver);
+    color: var(--text-gray);
     line-height: 1.8;
+}
+
+/* Boarding notes 卡片特殊樣式 */
+.boarding-notes-card {
+    grid-column: span 2;
+}
+
+.boarding-notes-list {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.boarding-notes-list li {
+    margin-bottom: 8px;
 }
 
 /* 提醒頁面響應式 */
