@@ -12,34 +12,54 @@ This is a single-page application for an 8-day, 7-night Texas basketball-themed 
 
 ## 🎨 Design System & Color Scheme
 
-### Official Dallas Mavericks Color Palette
+### Japanese Fresh Style with Basketball Blue Accents
 
-The entire design is based on the **Dallas Mavericks** official team colors:
+The design uses a **Japanese fresh aesthetic** with clean whites and soft grays, while preserving **Dallas Mavericks blue** as basketball-themed accents:
 
 ```css
 :root {
-    --mavs-royal-blue: #0053BC;  /* Primary brand color */
-    --mavs-navy-blue: #002B5C;   /* Dark backgrounds */
-    --mavs-silver: #BBC4CA;      /* Secondary text */
-    --mavs-black: #061922;       /* Deep backgrounds */
+    /* Basketball Theme Colors (Mavericks - used as accents) */
+    --mavs-royal-blue: #0053BC;   /* Primary basketball accent */
+    --mavs-navy-blue: #002B5C;    /* Deep blue for special elements */
+    --mavs-light-blue: #6BA3D8;   /* Soft blue for gradients */
+
+    /* Japanese Fresh Main Colors */
+    --bg-light: #F8F9FA;          /* Light gray background */
+    --bg-white: #FFFFFF;          /* Pure white cards */
+    --bg-cream: #FEFDFB;          /* Cream white for body */
+    --text-dark: #2C3E50;         /* Primary dark text */
+    --text-gray: #5A6C7D;         /* Secondary gray text */
+    --text-light: #8B9DAF;        /* Light gray text */
+
+    /* Fresh Accent Colors */
+    --accent-pink: #FFB6C1;       /* Soft pink */
+    --accent-mint: #B4E7CE;       /* Mint green for hover */
+    --accent-lavender: #D4C5F9;   /* Lavender purple */
+    --accent-peach: #FFDAB9;      /* Peach tone */
+
+    /* Neutral Tones */
+    --border-light: #E8ECEF;      /* Soft gray borders */
+    --shadow-soft: rgba(44, 62, 80, 0.08);  /* Subtle shadows */
 }
 ```
 
-### Accent Colors
-- **Orange**: `#FFA500` - Used for highlights, prices, NBA events, and interactive elements
-- **Gradients**: Navy to royal blue (`135deg` angle is preferred)
-
 ### Visual Style Characteristics
 
-1. **Background**: Dark gradient (`--mavs-black` to `--mavs-navy-blue`) with `background-attachment: fixed`
-2. **Cards**: Semi-transparent navy backgrounds with royal blue borders
-3. **Glassmorphism**: `backdrop-filter: blur(10px)` used for overlay effects
-4. **Shadows**: Blue-tinted shadows (`rgba(0, 83, 188, 0.4-0.7)`) for depth
+1. **Background**: Light gradient (`--bg-cream` to `--bg-light`) - clean and airy
+2. **Cards**: Pure white (`--bg-white`) with soft gray borders and subtle shadows
+3. **Text**: Dark gray (`--text-dark`) for readability on white backgrounds
+4. **Basketball Elements**: Blue gradients reserved for:
+   - Header section
+   - Active tab buttons
+   - NBA Day 4 card
+   - Day badges
+   - Budget totals
 5. **Hover Effects**:
-   - `translateY(-5px)` lift
-   - Enhanced box-shadow
-   - Border color changes to royal blue or orange
-6. **Border Radius**: 12-25px for modern, rounded appearance
+   - `translateY(-8px)` lift
+   - Soft blue-tinted shadows
+   - Border color changes to light blue
+6. **Border Radius**: 15-25px for modern, friendly appearance
+7. **Shadows**: Neutral soft shadows instead of blue-tinted ones
 
 ### Typography
 
@@ -402,24 +422,36 @@ function toggleDay(day) {
 
 ```css
 /* Backgrounds */
-body background: linear-gradient(135deg, #061922 0%, #002B5C 100%)
-card background: linear-gradient(135deg, rgba(0,43,92,0.6) 0%, rgba(0,43,92,0.4) 100%)
-header background: linear-gradient(135deg, #002B5C 0%, #0053BC 50%, #0066CC 100%)
+body background: linear-gradient(135deg, #FEFDFB 0%, #F8F9FA 100%)
+card background: #FFFFFF (pure white)
+header background: linear-gradient(135deg, #6BA3D8 0%, #0053BC 100%) /* Basketball blue */
 
 /* Borders */
-normal border: 2px solid rgba(0,83,188,0.4)
-hover border: 2px solid #0053BC
-active/special border: 2px solid #FFA500
+normal border: 2px solid #E8ECEF (--border-light)
+hover border: 2px solid #6BA3D8 (--mavs-light-blue)
+NBA/special border: 3px solid #0053BC (--mavs-royal-blue)
 
 /* Text Colors */
-primary text: #fff
-secondary text: #BBC4CA (--mavs-silver)
-emphasis/price: #FFA500 (orange)
+primary text: #2C3E50 (--text-dark)
+secondary text: #5A6C7D (--text-gray)
+light text: #8B9DAF (--text-light)
+emphasis/price: #0053BC (blue instead of orange)
 
 /* Shadows */
-normal shadow: 0 10px 30px rgba(0,83,188,0.5)
-heavy shadow: 0 15px 50px rgba(0,83,188,0.5)
-glow effect: 0 0 20px rgba(255,165,0,0.5)
+normal shadow: 0 4px 12px rgba(44,62,80,0.08) /* Soft neutral */
+hover shadow: 0 12px 28px rgba(107,163,216,0.25) /* Light blue tint */
+NBA shadow: 0 8px 24px rgba(0,83,188,0.3) /* Basketball blue */
+
+/* Basketball Elements (Blue Accents) */
+active tab: linear-gradient(135deg, #6BA3D8 0%, #0053BC 100%)
+day badge: linear-gradient(135deg, #6BA3D8 0%, #0053BC 100%)
+budget total: linear-gradient(135deg, #6BA3D8 0%, #0053BC 100%)
+NBA card background: linear-gradient(135deg, rgba(107,163,216,0.15), rgba(0,83,188,0.1))
+
+/* Fresh Accent Colors (Hover States) */
+mint green hover: #B4E7CE (--accent-mint)
+soft pink: #FFB6C1 (--accent-pink)
+lavender: #D4C5F9 (--accent-lavender)
 ```
 
 ---
