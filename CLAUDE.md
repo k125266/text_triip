@@ -341,9 +341,16 @@ function toggleDay(day) {
 2. **Maintain gradient direction**: Use `135deg` for consistency
 3. **Preserve animation timing**: Existing animations are carefully balanced
 4. **Keep border-radius values**: 15-25px range for cards
-5. **Use mustard yellow (`--mustard` / #D8CA86) for emphasis**: Prices, highlights, call-to-actions
+5. **Follow contrast guidelines for price/emphasis colors**:
+   - Use **deep gold (#8B7500)** for price text on white/light backgrounds (航班資訊, 行程價格)
+   - Use **mustard yellow (#D8CA86)** for decorative labels on dark backgrounds
+   - Use **orange (#FFA500)** for interactive hover states requiring high visibility
 6. **Layer backgrounds for depth**: Combine `--ecru`, `--glossy-silk`, and `--bg-white` for visual hierarchy
 7. **Natural color hover states**: Use `--grayish-cherry`, `--pale-blue-green`, or `--young-grass` for different card types
+8. **Ensure text readability**:
+   - Use multi-layer text-shadow for white text over complex backgrounds
+   - NBA badge requires white text (#fff) for contrast against dark blue gradient
+   - Regular day badges use charcoal blue for contrast against light gradients
 
 ### When Adding Content
 
@@ -467,7 +474,8 @@ body background: linear-gradient(135deg, #F4F4F0 0%, #EBE6D8 50%, #F4F4F0 100%)
   /* 生成色 (ecru) → 練色 (glossy-silk) warm gradient */
 card background: #FFFFFF (pure white)
 secondary background: #EBE6D8 (--glossy-silk, 練色)
-day card inner: #F4F4F0 (--ecru, 生成色)
+day card inner: linear-gradient(135deg, #EBE6D8 0%, rgba(235,230,216,0.5) 100%)
+  /* 練色 gradient with border-top for visual separation */
 
 /* Borders */
 normal border: 2px solid rgba(145,123,109,0.2) (--border-color, walnut-tinted)
@@ -489,8 +497,15 @@ brand secondary: #6C849D (--nando, 納戶色 - Grayish Blue)
 brand dark: #2B3E50 (--mavs-navy-blue, darker tetsukon variant)
 
 /* Accent Colors */
-price/emphasis: #D8CA86 (--mustard, 辛子色 - mustard yellow)
-price background: rgba(216,202,134,0.2) with border rgba(216,202,134,0.3)
+price/emphasis (decorative): #D8CA86 (--mustard, 辛子色 - mustard yellow)
+price/emphasis (high contrast): #8B7500 (deep gold - for text on light backgrounds)
+price background (mustard): rgba(216,202,134,0.2) with border rgba(216,202,134,0.3)
+price background (deep gold): rgba(184,150,10,0.15) with border rgba(184,150,10,0.3)
+
+/* Contrast Guidelines */
+- Use #8B7500 (deep gold) for price text on white/light backgrounds (航班、行程價格)
+- Use #D8CA86 (mustard) for decorative elements and labels on dark backgrounds
+- Use #FFA500 (orange) for interactive hover states that need high visibility
 
 /* Shadows */
 normal shadow: 0 4px 12px rgba(47,58,76,0.08) (--shadow-color)
@@ -525,9 +540,13 @@ budget row hover: #AABCBF (--pale-blue-green, 水淺蔥)
 weather item hover: #AABCBF (--pale-blue-green, 水淺蔥)
 info card hover: linear-gradient(135deg, rgba(255,255,255,1) 0%, rgba(181,202,160,0.1) 100%)
   /* white → 若草色 subtle tint */
+route segment hover distance: #FFA500 (orange) with text-shadow glow
+  /* 0 0 8px rgba(255,165,0,0.5) */
 
 /* Journey Cards (City Themes) */
 journey days label: #D8CA86 (--mustard, 辛子色)
+journey city names: #fff with multi-layer text-shadow for readability
+  /* 0 2px 8px rgba(0,0,0,0.9), 0 4px 16px rgba(0,0,0,0.7), 0 0 30px rgba(0,0,0,0.5) */
 journey highlights badge: rgba(181,202,160,0.9) with #2B313B text
   /* 若草色 background, 炭藍色 text */
 journey highlights badge hover: #B5CAA0 (--young-grass, 若草色)
@@ -595,10 +614,20 @@ The design philosophy combines **Japanese traditional colors (日系傳統色)**
    - Mustard yellow (辛子色) draws attention to pricing and important information
    - Different natural colors for different card types maintain visual interest
 
-This approach resolves the "too blue/too heavy" (太藍太沈重) feedback while preserving the basketball identity and adding Japanese aesthetic warmth.
+4. **UI Contrast & Accessibility Refinements** (2026-01-04):
+   - **Deep Gold for High Contrast**: Introduced #8B7500 (deep gold) for price text on light backgrounds
+     - Replaces low-contrast mustard yellow (#D8CA86) in航班資訊 and 行程價格
+     - Ensures WCAG AA compliance for text readability
+   - **Multi-layer Text Shadows**: Enhanced journey card city names with 3-layer shadows for better readability over complex backgrounds
+   - **Visual Separation**: Added gradient backgrounds and borders to `.day-card-inner` to clearly distinguish expanded content from card headers
+   - **Interactive Feedback**: Orange (#FFA500) glow effect on route segment distance text during hover for better UX
+   - **Layout Improvements**: Centered standalone rental car card to prevent awkward left-aligned appearance
+   - **Badge Contrast**: NBA badge uses white text (#fff) while regular day badges use charcoal blue for appropriate contrast ratios
+
+This approach resolves the "too blue/too heavy" (太藍太沈重) feedback while preserving the basketball identity and adding Japanese aesthetic warmth. Subsequent contrast improvements ensure accessibility without compromising the refined aesthetic.
 
 ---
 
-**Last Updated**: 2026-01-03
-**Version**: 2.0 (Japanese Traditional Color Update)
+**Last Updated**: 2026-01-04
+**Version**: 2.1 (UI Contrast & Accessibility Refinements)
 **Maintained By**: AI Assistant (Claude)
