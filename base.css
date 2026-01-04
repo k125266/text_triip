@@ -2,10 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;500;600;700&display=swap');
 
 :root {
-    /* 籃球主題色（保留獨行俠配色作為點綴） */
-    --mavs-royal-blue: #0053BC;
-    --mavs-navy-blue: #002B5C;
-    --mavs-light-blue: #6BA3D8;
+    /* === 日系柔和藍色系統 (Muted Blue Palette) === */
+
+    /* 主要品牌藍色 - 鐵紺 (Tetsukon / Iron Blue) */
+    --tetsukon: #3A5B75;          /* 鐵紺 - 深沉灰藍，主要品牌色 */
+    --nando: #6C849D;             /* 納戶色 - 灰藍，互動與次要元素 */
+
+    /* 傳統藍色別名（向下兼容） */
+    --mavs-royal-blue: var(--tetsukon);
+    --mavs-navy-blue: #2B3E50;    /* 更深的鐵紺變體 */
+    --mavs-light-blue: var(--nando);
 
     /* === 日系傳統色配色系統 === */
 
@@ -23,18 +29,20 @@
     /* 大地與強調色 (Earth & Accents) */
     --mustard: #D8CA86;           /* 辛子色 - 芥末黃，點睛之筆 */
     --walnut: #917B6D;            /* 胡桃色 - 溫暖淺棕 */
-    --neutral-gray: #727171;      /* 素鼠 - 柔和深灰 */
-    --iron-blue: #2F3A4C;         /* 鐵御納戶 - 知性深藍灰 */
+    --warm-gray: #84898C;         /* 暖灰色 - 次要文字 */
+    --charcoal-blue: #2B313B;     /* 炭藍色 - 主要文字（非純黑） */
 
     /* 語義化別名 (方便使用) */
     --bg-main: var(--ecru);
     --bg-card: var(--bg-white);
     --bg-secondary: var(--glossy-silk);
-    --text-primary: var(--iron-blue);
-    --text-secondary: var(--neutral-gray);
+    --text-primary: var(--charcoal-blue);
+    --text-secondary: var(--warm-gray);
     --text-tertiary: var(--walnut);
     --accent-primary: var(--mustard);
     --accent-nature: var(--young-grass);
+    --brand-primary: var(--tetsukon);
+    --brand-secondary: var(--nando);
     --border-color: rgba(145, 123, 109, 0.2);
     --shadow-color: rgba(47, 58, 76, 0.08);
 }
