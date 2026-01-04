@@ -71,7 +71,7 @@
     font-size: 1.1em;
     box-shadow: 0 3px 10px rgba(145, 123, 109, 0.25);
     border: 2px solid rgba(255, 255, 255, 0.6);
-    color: var(--iron-blue);
+    color: var(--charcoal-blue);
 }
 
 /* NBA Badge - 保留特殊強調 */
@@ -80,6 +80,7 @@
     animation: basketball-bounce 1s ease-in-out infinite;
     border-color: rgba(255, 255, 255, 0.7);
     box-shadow: 0 4px 15px rgba(0, 83, 188, 0.4);
+    color: #fff;
 }
 
 .day-info {
@@ -108,7 +109,8 @@
 
 .day-card-inner {
     padding: 30px 25px;
-    background: var(--ecru);
+    background: linear-gradient(135deg, var(--glossy-silk) 0%, rgba(235, 230, 216, 0.5) 100%);
+    border-top: 2px solid rgba(145, 123, 109, 0.15);
 }
 
 /* 時間軸設計 - 日系配色 */
@@ -195,15 +197,15 @@
 }
 
 .timeline-price {
-    color: var(--mustard);
+    color: #8B7500;
     font-weight: 600;
     margin-top: 10px;
     font-size: 1.05em;
-    background: rgba(216, 202, 134, 0.2);
+    background: rgba(184, 150, 10, 0.15);
     padding: 6px 12px;
     border-radius: 10px;
     display: inline-block;
-    border: 1px solid rgba(216, 202, 134, 0.3);
+    border: 1px solid rgba(184, 150, 10, 0.3);
 }
 
 /* NBA 特殊樣式 - 保留籃球藍色主題 */
@@ -231,7 +233,7 @@
 .day-budget-footer {
     margin-top: 25px;
     padding: 20px;
-    background: linear-gradient(135deg, var(--wisteria-gray), var(--iron-blue));
+    background: linear-gradient(135deg, var(--wisteria-gray), var(--charcoal-blue));
     border-radius: 15px;
     display: flex;
     justify-content: space-between;

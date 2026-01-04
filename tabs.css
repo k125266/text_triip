@@ -93,6 +93,14 @@
     margin-bottom: 30px;
 }
 
+/* 租車卡片居中處理 */
+.compact-grid > .info-card:nth-child(2):not(.flight-info-card):not(.route-map-card) {
+    grid-column: 1 / -1;
+    max-width: 600px;
+    margin: 0 auto;
+    width: 100%;
+}
+
 .info-card {
     background: var(--bg-card);
     border: 2px solid var(--border-color);
@@ -368,7 +376,7 @@
     font-weight: bold;
     color: #fff;
     margin-bottom: 15px;
-    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.8);
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9), 0 4px 16px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0, 0, 0, 0.5);
 }
 
 .journey-highlights {
@@ -734,6 +742,11 @@
     border-color: var(--mavs-royal-blue);
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(0, 83, 188, 0.4);
+}
+
+.route-segment:hover .distance {
+    color: #FFA500;
+    text-shadow: 0 0 8px rgba(255, 165, 0, 0.5);
 }
 
 .segment-cities {

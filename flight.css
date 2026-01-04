@@ -22,7 +22,7 @@
 .flight-label {
     font-size: 1.5em;
     font-weight: bold;
-    color: var(--mustard);
+    color: #B8960A;
     margin-bottom: 15px;
 }
 
@@ -47,12 +47,12 @@
 
 .flight-class {
     font-size: 1em;
-    color: var(--mustard);
+    color: #8B7500;
     align-self: center;
-    background: rgba(216, 202, 134, 0.2);
+    background: rgba(184, 150, 10, 0.15);
     padding: 4px 12px;
     border-radius: 8px;
-    border: 1px solid rgba(216, 202, 134, 0.3);
+    border: 1px solid rgba(184, 150, 10, 0.3);
 }
 
 .flight-times {
@@ -93,13 +93,13 @@
 
 .flight-duration {
     font-size: 1em;
-    color: var(--mustard);
+    color: #8B7500;
     font-weight: bold;
     text-align: center;
     padding: 8px 15px;
-    background: rgba(216, 202, 134, 0.15);
+    background: rgba(184, 150, 10, 0.15);
     border-radius: 10px;
-    border: 1px dashed rgba(216, 202, 134, 0.5);
+    border: 1px dashed rgba(184, 150, 10, 0.5);
 }
 
 .flight-route {
