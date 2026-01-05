@@ -73,6 +73,21 @@
 
 ### 指令偏好
 - 建立 PR 時，請自動幫我生成標題與精簡的描述，不需要每次都問我內容。
+- **必須提供可點擊的 PR 連結**，格式如下：
+
+### PR 連結格式
+當完成開發並準備建立 PR 時，請使用以下格式生成連結：
+
+```
+https://github.com/k125266/texas_trip/compare/main...<分支名稱>
+```
+
+**範例：**
+```
+https://github.com/k125266/texas_trip/compare/main...claude/create-claude-documentation-ex1dJ
+```
+
+此連結會自動開啟 GitHub 的 PR 建立頁面，並預設比較 `main` 分支與目標分支的差異。
 
 ---
 
