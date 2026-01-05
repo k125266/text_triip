@@ -437,3 +437,344 @@
         font-size: 0.85em;
     }
 }
+
+/* ========== 行李打包清單樣式 ========== */
+
+.packing-section {
+    margin-top: 40px;
+    padding: 30px;
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.packing-header {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--glossy-silk);
+    display: flex;
+    align-items: center;
+}
+
+/* 分類區塊 */
+.packing-category {
+    margin-bottom: 25px;
+    background: linear-gradient(135deg, rgba(235,230,216,0.3) 0%, rgba(255,255,255,0.5) 100%);
+    border-radius: 15px;
+    padding: 20px;
+    border-left: 4px solid var(--young-grass);
+    transition: all 0.3s ease;
+}
+
+.packing-category:hover {
+    border-left-color: var(--tetsukon);
+    box-shadow: 0 4px 15px rgba(181, 202, 160, 0.2);
+}
+
+.category-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--tetsukon);
+    margin-bottom: 18px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid rgba(145, 123, 109, 0.2);
+}
+
+.category-icon {
+    font-size: 1.4em;
+}
+
+/* 物品列表 */
+.packing-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.packing-item {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+    padding: 15px;
+    background: var(--bg-card);
+    border-radius: 12px;
+    border: 1px solid rgba(145, 123, 109, 0.15);
+    transition: all 0.3s ease;
+}
+
+.packing-item:hover {
+    transform: translateX(5px);
+    border-color: var(--pale-blue-green);
+    box-shadow: 0 2px 8px rgba(170, 188, 191, 0.2);
+}
+
+.item-name {
+    font-size: 1.05em;
+    font-weight: 600;
+    color: var(--text-primary);
+    align-self: center;
+}
+
+.item-quantity {
+    font-size: 0.95em;
+    color: var(--tetsukon);
+    font-weight: 600;
+    padding: 4px 12px;
+    background: linear-gradient(135deg, rgba(108,132,157,0.1), rgba(58,91,117,0.08));
+    border-radius: 8px;
+    text-align: center;
+    align-self: center;
+    white-space: nowrap;
+}
+
+.item-note {
+    grid-column: 1 / -1;
+    font-size: 0.9em;
+    color: var(--text-tertiary);
+    line-height: 1.6;
+    padding-top: 8px;
+    border-top: 1px dashed rgba(145, 123, 109, 0.15);
+}
+
+/* ========== 重要提醒卡片樣式 ========== */
+
+.important-reminders {
+    margin-top: 40px;
+    padding: 30px;
+    background: linear-gradient(135deg, var(--ecru) 0%, var(--glossy-silk) 100%);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+}
+
+.reminders-header {
+    font-size: 1.8em;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid var(--walnut);
+    display: flex;
+    align-items: center;
+}
+
+.reminder-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+
+.reminder-card {
+    position: relative;
+    background: var(--bg-card);
+    border-radius: 15px;
+    padding: 25px 25px 25px 80px;
+    box-shadow: 0 4px 12px rgba(47, 58, 76, 0.1);
+    border-left: 5px solid var(--young-grass);
+    transition: all 0.3s ease;
+}
+
+.reminder-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(47, 58, 76, 0.15);
+}
+
+/* NBA 提醒卡片 */
+.nba-reminder {
+    border-left-color: #FFA500;
+    background: linear-gradient(135deg, rgba(255,165,0,0.05) 0%, var(--bg-card) 50%);
+}
+
+.nba-reminder .reminder-number {
+    background: linear-gradient(135deg, #FFA500, #FF8C00);
+}
+
+/* 天氣提醒卡片 */
+.weather-reminder {
+    border-left-color: var(--pale-blue-green);
+    background: linear-gradient(135deg, rgba(170,188,191,0.08) 0%, var(--bg-card) 50%);
+}
+
+.weather-reminder .reminder-number {
+    background: linear-gradient(135deg, var(--pale-blue-green), var(--young-grass));
+}
+
+/* 導航提醒卡片 */
+.navigation-reminder {
+    border-left-color: var(--tetsukon);
+    background: linear-gradient(135deg, rgba(58,91,117,0.08) 0%, var(--bg-card) 50%);
+}
+
+.navigation-reminder .reminder-number {
+    background: linear-gradient(135deg, var(--nando), var(--tetsukon));
+}
+
+.reminder-number {
+    position: absolute;
+    left: 20px;
+    top: 25px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--young-grass), var(--pale-blue-green));
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.reminder-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.reminder-title {
+    font-size: 1.2em;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 5px;
+}
+
+.reminder-list {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.reminder-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+}
+
+.reminder-list li:before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--tetsukon);
+    font-weight: bold;
+}
+
+.reminder-list li strong {
+    color: var(--text-primary);
+}
+
+/* ========== 響應式設計 ========== */
+
+@media (max-width: 768px) {
+    .packing-section,
+    .important-reminders {
+        padding: 25px 20px;
+        margin-top: 30px;
+    }
+
+    .packing-header,
+    .reminders-header {
+        font-size: 1.5em;
+        margin-bottom: 20px;
+    }
+
+    .packing-category {
+        padding: 15px;
+    }
+
+    .category-title {
+        font-size: 1.15em;
+        margin-bottom: 15px;
+    }
+
+    .packing-item {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 12px;
+    }
+
+    .item-quantity {
+        justify-self: start;
+    }
+
+    .item-note {
+        padding-top: 5px;
+    }
+
+    .reminder-card {
+        padding: 60px 20px 20px 20px;
+    }
+
+    .reminder-number {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10px;
+    }
+
+    .reminder-title {
+        font-size: 1.1em;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .packing-section,
+    .important-reminders {
+        padding: 20px 15px;
+        margin-top: 25px;
+    }
+
+    .packing-header,
+    .reminders-header {
+        font-size: 1.3em;
+        margin-bottom: 18px;
+    }
+
+    .category-title {
+        font-size: 1.05em;
+    }
+
+    .packing-item {
+        padding: 10px;
+    }
+
+    .item-name {
+        font-size: 0.95em;
+    }
+
+    .item-quantity {
+        font-size: 0.85em;
+        padding: 3px 8px;
+    }
+
+    .item-note {
+        font-size: 0.85em;
+    }
+
+    .reminder-card {
+        padding: 55px 15px 15px 15px;
+    }
+
+    .reminder-number {
+        width: 38px;
+        height: 38px;
+        font-size: 1.3em;
+    }
+
+    .reminder-title {
+        font-size: 1em;
+    }
+
+    .reminder-list li {
+        font-size: 0.9em;
+        padding-left: 20px;
+    }
+}
