@@ -93,14 +93,6 @@
     margin-bottom: 30px;
 }
 
-/* 租車卡片居中處理 */
-.compact-grid > .info-card:nth-child(2):not(.flight-info-card):not(.route-map-card) {
-    grid-column: 1 / -1;
-    max-width: 600px;
-    margin: 0 auto;
-    width: 100%;
-}
-
 .info-card {
     background: var(--bg-card);
     border: 2px solid var(--border-color);
@@ -199,8 +191,8 @@
 }
 
 .budget-row.total {
-    background: linear-gradient(135deg, var(--wisteria-gray) 0%, var(--iron-blue) 100%);
-    border: 2px solid var(--iron-blue);
+    background: linear-gradient(135deg, var(--wisteria-gray) 0%, var(--charcoal-blue) 100%);
+    border: 2px solid var(--tetsukon);
     font-weight: bold;
     font-size: 1.3em;
     margin-top: 15px;
@@ -224,7 +216,7 @@
     margin-bottom: 30px;
     box-shadow: 0 8px 24px var(--shadow-color);
     border: 3px solid var(--walnut);
-    min-height: 500px;
+    min-height: 320px;
 }
 
 .stats-bg {
@@ -388,7 +380,7 @@
 .highlight-badge {
     background: rgba(181, 202, 160, 0.9);
     backdrop-filter: blur(10px);
-    color: var(--iron-blue);
+    color: var(--tetsukon);
     padding: 8px 15px;
     border-radius: 20px;
     font-size: 0.9em;
@@ -400,7 +392,7 @@
 .highlight-badge:hover {
     background: var(--young-grass);
     border-color: var(--walnut);
-    color: var(--iron-blue);
+    color: var(--tetsukon);
 }
 
 /* 天氣提醒 - 日系白色卡片 */
@@ -508,7 +500,7 @@
 
     /* 統計數據英雄區塊 */
     .stats-hero {
-        min-height: 400px;
+        min-height: 280px;
     }
     .stats-overlay {
         padding: 40px 25px;
@@ -627,7 +619,7 @@
 
     /* 統計數據英雄區塊 */
     .stats-hero {
-        min-height: 350px;
+        min-height: 250px;
         border-radius: 20px;
     }
     .stats-overlay {

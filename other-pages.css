@@ -47,7 +47,7 @@
     font-size: 1.5em;
     font-weight: 600;
     padding: 20px;
-    background: linear-gradient(135deg, var(--wisteria-gray), var(--iron-blue));
+    background: linear-gradient(135deg, var(--wisteria-gray), var(--charcoal-blue));
     border-radius: 15px;
     color: #fff;
     box-shadow: 0 4px 15px rgba(149, 163, 200, 0.35);

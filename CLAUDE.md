@@ -76,18 +76,38 @@
 - **必須提供可點擊的 PR 連結**，格式如下：
 
 ### PR 連結格式
-當完成開發並準備建立 PR 時，請使用以下格式生成連結：
+當完成開發並準備建立 PR 時，請使用以下格式生成**包含標題和內文**的連結：
 
+**基本格式：**
 ```
-https://github.com/k125266/texas_trip/compare/main...<分支名稱>
-```
-
-**範例：**
-```
-https://github.com/k125266/texas_trip/compare/main...claude/create-claude-documentation-ex1dJ
+https://github.com/k125266/texas_trip/compare/main...<分支名稱>?quick_pull=1&title=<URL編碼的標題>&body=<URL編碼的內文>
 ```
 
-此連結會自動開啟 GitHub 的 PR 建立頁面，並預設比較 `main` 分支與目標分支的差異。
+**產生方式（使用 Python）：**
+```python
+import urllib.parse
+
+title = 'feat: 標題內容'
+body = '''- 重點 1
+- 重點 2
+- 重點 3'''
+
+base_url = 'https://github.com/k125266/texas_trip/compare/main...<分支名稱>'
+encoded_title = urllib.parse.quote(title)
+encoded_body = urllib.parse.quote(body)
+
+pr_url = f'{base_url}?quick_pull=1&title={encoded_title}&body={encoded_body}'
+```
+
+**範例（已編碼）：**
+```
+https://github.com/k125266/texas_trip/compare/main...claude/create-claude-documentation-ex1dJ?quick_pull=1&title=feat%3A%20%E6%96%B0%E5%A2%9E%E5%8A%9F%E8%83%BD&body=-%20%E9%87%8D%E9%BB%9E1%0A-%20%E9%87%8D%E9%BB%9E2
+```
+
+**重要提醒：**
+- 標題和內文必須使用 `urllib.parse.quote()` 進行 URL 編碼
+- 內文中的換行符號會被編碼為 `%0A`
+- 此連結會自動開啟 GitHub 的 PR 建立頁面，並預填標題和內文
 
 ---
 

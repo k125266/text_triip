@@ -104,7 +104,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--iron-blue);
+    background: var(--charcoal-blue);
 }
 
 /* Firefox 滾動條 */
