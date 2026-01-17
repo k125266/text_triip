@@ -47,18 +47,58 @@ function showTab(tabName) {
     event.target.classList.add('active');
 }
 
-// 分類標籤配置
+// 分類標籤配置（使用 Flaticon 圖片）
 const categoryConfig = {
-    transport: { label: '交通', icon: '🚗', class: 'tag-transport' },
-    dining: { label: '用餐', icon: '🍽️', class: 'tag-dining' },
-    attraction: { label: '景點', icon: '🎯', class: 'tag-attraction' },
-    shopping: { label: '購物', icon: '🛍️', class: 'tag-shopping' },
-    accommodation: { label: '住宿', icon: '🏨', class: 'tag-accommodation' },
-    rest: { label: '休息', icon: '💤', class: 'tag-rest' },
-    nba: { label: 'NBA', icon: '🏀', class: 'tag-nba' },
-    arrival: { label: '抵達', icon: '✈️', class: 'tag-arrival' },
-    checkin: { label: '登機', icon: '✈️', class: 'tag-checkin' },
-    return: { label: '返程', icon: '✈️', class: 'tag-return' }
+    transport: {
+        label: '交通',
+        icon: 'https://cdn-icons-png.flaticon.com/512/9709/9709678.png',
+        class: 'tag-transport'
+    },
+    dining: {
+        label: '用餐',
+        icon: 'https://cdn-icons-png.flaticon.com/512/3703/3703377.png',
+        class: 'tag-dining'
+    },
+    attraction: {
+        label: '景點',
+        icon: 'https://cdn-icons-png.flaticon.com/512/8087/8087892.png',
+        class: 'tag-attraction'
+    },
+    shopping: {
+        label: '購物',
+        icon: 'https://cdn-icons-png.flaticon.com/512/8730/8730692.png',
+        class: 'tag-shopping'
+    },
+    accommodation: {
+        label: '住宿',
+        icon: 'https://cdn-icons-png.flaticon.com/512/8526/8526337.png',
+        class: 'tag-accommodation'
+    },
+    rest: {
+        label: '休息',
+        icon: 'https://cdn-icons-png.flaticon.com/512/7716/7716942.png',
+        class: 'tag-rest'
+    },
+    nba: {
+        label: 'NBA',
+        icon: 'https://cdn-icons-png.flaticon.com/512/7462/7462399.png',
+        class: 'tag-nba'
+    },
+    arrival: {
+        label: '抵達',
+        icon: 'https://cdn-icons-png.flaticon.com/512/12142/12142421.png',
+        class: 'tag-arrival'
+    },
+    checkin: {
+        label: '登機',
+        icon: 'https://cdn-icons-png.flaticon.com/512/12142/12142421.png',
+        class: 'tag-checkin'
+    },
+    return: {
+        label: '返程',
+        icon: 'https://cdn-icons-png.flaticon.com/512/12142/12142421.png',
+        class: 'tag-return'
+    }
 };
 
 // 每日行程資料（完整詳細版）
@@ -266,7 +306,7 @@ function renderPage(day) {
             <div class="timeline-item ${specialClass}">
                 <div class="timeline-time">
                     <div class="time-circle ${categoryInfo.class}">
-                        <span class="category-icon">${categoryInfo.icon}</span>
+                        <img src="${categoryInfo.icon}" class="category-icon" alt="${categoryInfo.label}">
                     </div>
                     <div class="time-text">${activity.time}</div>
                 </div>

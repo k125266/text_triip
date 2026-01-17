@@ -177,8 +177,10 @@
 }
 
 .category-icon {
-    font-size: 1.1em;
-    line-height: 1;
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    display: block;
 }
 
 /* 不同分類的圓點顏色 */
@@ -676,7 +678,8 @@
     }
 
     .category-icon {
-        font-size: 1em;
+        width: 16px;
+        height: 16px;
     }
 
     .book-nav {
