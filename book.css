@@ -165,8 +165,33 @@
 }
 
 .time-circle {
-    display: none; /* 隱藏原本的圓點 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--bg-card);
+    border: 3px solid var(--tetsukon);
+    box-shadow: 0 2px 8px rgba(58, 91, 117, 0.2);
 }
+
+.category-icon {
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+/* 不同分類的圓點顏色 */
+.time-circle.tag-transport { border-color: #6C849D; background: rgba(108, 132, 157, 0.1); }
+.time-circle.tag-dining { border-color: #D8CA86; background: rgba(216, 202, 134, 0.1); }
+.time-circle.tag-attraction { border-color: #B5CAA0; background: rgba(181, 202, 160, 0.1); }
+.time-circle.tag-shopping { border-color: #D7C4BB; background: rgba(215, 196, 187, 0.1); }
+.time-circle.tag-accommodation { border-color: #95A3C8; background: rgba(149, 163, 200, 0.1); }
+.time-circle.tag-rest { border-color: #AABCBF; background: rgba(170, 188, 191, 0.1); }
+.time-circle.tag-nba { border-color: #FFA500; background: rgba(255, 165, 0, 0.1); }
+.time-circle.tag-arrival { border-color: #6C849D; background: rgba(108, 132, 157, 0.1); }
+.time-circle.tag-checkin { border-color: #6C849D; background: rgba(108, 132, 157, 0.1); }
+.time-circle.tag-return { border-color: #84898C; background: rgba(132, 137, 140, 0.1); }
 
 /* 時間軸線 - 隱藏 */
 .timeline-line {
@@ -180,14 +205,55 @@
     gap: 10px;
 }
 
-.timeline-title {
-    font-size: 1.25em;
-    font-weight: 700;
-    color: var(--charcoal-blue);
-    line-height: 1.4;
+/* 標題行容器 */
+.timeline-header {
     display: flex;
     align-items: center;
     gap: 8px;
+    flex-wrap: wrap;
+}
+
+/* 分類標籤 */
+.category-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.75em;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.tag-transport { background: #6C849D; color: white; }
+.tag-dining { background: #D8CA86; color: #2B313B; }
+.tag-attraction { background: #B5CAA0; color: #2B313B; }
+.tag-shopping { background: #D7C4BB; color: #2B313B; }
+.tag-accommodation { background: #95A3C8; color: white; }
+.tag-rest { background: #AABCBF; color: #2B313B; }
+.tag-nba { background: linear-gradient(135deg, #FFA500, #FF8C00); color: white; }
+.tag-arrival { background: #6C849D; color: white; }
+.tag-checkin { background: #6C849D; color: white; }
+.tag-return { background: #84898C; color: white; }
+
+/* 價格徽章 */
+.price-badge {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #2B313B;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+    font-size: 0.85em;
+    margin-left: auto;
+    box-shadow: 0 2px 6px rgba(255, 165, 0, 0.3);
+    white-space: nowrap;
+}
+
+.timeline-title {
+    font-size: 1.15em;
+    font-weight: 700;
+    color: var(--charcoal-blue);
+    line-height: 1.4;
+    flex: 1;
 }
 
 .timeline-title .basketball-icon {
@@ -226,6 +292,14 @@
     border-left: 3px solid #B8960A;
     margin-top: 5px;
     max-width: fit-content;
+}
+
+.timeline-price-detail {
+    color: var(--warm-gray);
+    font-size: 0.95em;
+    margin-top: 8px;
+    padding-left: 12px;
+    border-left: 2px solid rgba(184, 150, 10, 0.3);
 }
 
 /* NBA 特殊樣式 */
@@ -562,8 +636,24 @@
         padding: 15px 0;
     }
 
+    .timeline-header {
+        gap: 6px;
+    }
+
+    .category-tag {
+        font-size: 0.7em;
+        padding: 2px 8px;
+    }
+
     .timeline-title {
-        font-size: 1.1em;
+        font-size: 1.05em;
+    }
+
+    .price-badge {
+        font-size: 0.8em;
+        padding: 3px 10px;
+        margin-left: 0;
+        margin-top: 4px;
     }
 
     .timeline-desc {
@@ -573,6 +663,20 @@
     .timeline-price {
         font-size: 0.95em;
         padding: 7px 12px;
+    }
+
+    .timeline-price-detail {
+        font-size: 0.9em;
+    }
+
+    .time-circle {
+        width: 28px;
+        height: 28px;
+        border-width: 2px;
+    }
+
+    .category-icon {
+        font-size: 1em;
     }
 
     .book-nav {

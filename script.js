@@ -47,6 +47,20 @@ function showTab(tabName) {
     event.target.classList.add('active');
 }
 
+// 分類標籤配置
+const categoryConfig = {
+    transport: { label: '交通', icon: '🚗', class: 'tag-transport' },
+    dining: { label: '用餐', icon: '🍽️', class: 'tag-dining' },
+    attraction: { label: '景點', icon: '🎯', class: 'tag-attraction' },
+    shopping: { label: '購物', icon: '🛍️', class: 'tag-shopping' },
+    accommodation: { label: '住宿', icon: '🏨', class: 'tag-accommodation' },
+    rest: { label: '休息', icon: '💤', class: 'tag-rest' },
+    nba: { label: 'NBA', icon: '🏀', class: 'tag-nba' },
+    arrival: { label: '抵達', icon: '✈️', class: 'tag-arrival' },
+    checkin: { label: '登機', icon: '✈️', class: 'tag-checkin' },
+    return: { label: '返程', icon: '✈️', class: 'tag-return' }
+};
+
 // 每日行程資料（完整詳細版）
 const dayData = {
     1: {
@@ -245,17 +259,26 @@ function renderPage(day) {
         const isLast = index === data.activities.length - 1;
         const specialClass = activity.isNBA ? 'nba-timeline-item' : (activity.isReturn ? 'return-timeline-item' : '');
 
+        // 獲取分類配置
+        const categoryInfo = categoryConfig[activity.category] || { label: '', icon: '', class: '' };
+
         html += `
             <div class="timeline-item ${specialClass}">
                 <div class="timeline-time">
-                    <div class="time-circle"></div>
+                    <div class="time-circle ${categoryInfo.class}">
+                        <span class="category-icon">${categoryInfo.icon}</span>
+                    </div>
                     <div class="time-text">${activity.time}</div>
                 </div>
                 <div class="timeline-line ${isLast ? 'timeline-line-last' : ''}"></div>
                 <div class="timeline-content">
-                    <div class="timeline-title">${activity.title}</div>
+                    <div class="timeline-header">
+                        <span class="category-tag ${categoryInfo.class}">${categoryInfo.label}</span>
+                        <span class="timeline-title">${activity.title}</span>
+                        ${activity.price ? `<span class="price-badge">${activity.price.split('<br>')[0]}</span>` : ''}
+                    </div>
                     ${activity.desc ? `<div class="timeline-desc">${activity.desc}</div>` : ''}
-                    ${activity.price ? `<div class="timeline-price">${activity.price}</div>` : ''}
+                    ${activity.price && activity.price.includes('<br>') ? `<div class="timeline-price-detail">${activity.price.split('<br>').slice(1).join('<br>')}</div>` : ''}
                 </div>
             </div>
         `;
