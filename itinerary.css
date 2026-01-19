@@ -72,6 +72,10 @@
     box-shadow: 0 3px 10px rgba(145, 123, 109, 0.25);
     border: 2px solid rgba(255, 255, 255, 0.6);
     color: var(--charcoal-blue);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
 }
 
 /* NBA Badge - 保留特殊強調 */
