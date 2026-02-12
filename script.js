@@ -378,32 +378,90 @@ function renderPage(day) {
 
 // ========== 待辦清單功能 ==========
 
-// 從 localStorage 讀取勾選狀態
+// 將勾選狀態編碼為 URL hash（bitmask 轉 hex）
+function encodeChecklistToHash() {
+    const checkboxes = document.querySelectorAll('.checklist-checkbox');
+    let bitmask = 0;
+    checkboxes.forEach(checkbox => {
+        const index = parseInt(checkbox.id.replace('task', '')) - 1;
+        if (checkbox.checked) {
+            bitmask |= (1 << index);
+        }
+    });
+    return bitmask > 0 ? bitmask.toString(16) : '';
+}
+
+// 從 URL hash 解碼勾選狀態
+function decodeChecklistFromHash(hash) {
+    const match = hash.match(/checklist=([0-9a-fA-F]+)/);
+    if (!match) return null;
+    return parseInt(match[1], 16);
+}
+
+// 更新 URL hash（不觸發頁面跳轉）
+function updateUrlHash() {
+    const encoded = encodeChecklistToHash();
+    const currentHash = window.location.hash.replace('#', '');
+
+    // 移除舊的 checklist 參數
+    const otherParams = currentHash.split('&').filter(p => !p.startsWith('checklist=')).join('&');
+
+    let newHash = '';
+    if (encoded) {
+        newHash = otherParams ? `${otherParams}&checklist=${encoded}` : `checklist=${encoded}`;
+    } else {
+        newHash = otherParams;
+    }
+
+    // 用 replaceState 避免產生多餘的瀏覽紀錄
+    const newUrl = newHash ? `${window.location.pathname}#${newHash}` : window.location.pathname;
+    history.replaceState(null, '', newUrl);
+}
+
+// 從 URL hash 或 localStorage 讀取勾選狀態（URL hash 優先）
 function loadChecklistState() {
-    const savedState = localStorage.getItem('texasTripChecklist');
-    if (savedState) {
-        const checkedItems = JSON.parse(savedState);
-        checkedItems.forEach(taskId => {
-            const checkbox = document.getElementById(taskId);
-            if (checkbox) {
-                checkbox.checked = true;
-            }
+    const hash = window.location.hash;
+    const bitmask = decodeChecklistFromHash(hash);
+
+    if (bitmask !== null) {
+        // URL hash 有狀態 → 套用並同步到 localStorage
+        const checkboxes = document.querySelectorAll('.checklist-checkbox');
+        checkboxes.forEach(checkbox => {
+            const index = parseInt(checkbox.id.replace('task', '')) - 1;
+            checkbox.checked = (bitmask & (1 << index)) !== 0;
         });
+        saveToLocalStorage();
+    } else {
+        // 沒有 URL hash → 從 localStorage 讀取
+        const savedState = localStorage.getItem('texasTripChecklist');
+        if (savedState) {
+            const checkedItems = JSON.parse(savedState);
+            checkedItems.forEach(taskId => {
+                const checkbox = document.getElementById(taskId);
+                if (checkbox) {
+                    checkbox.checked = true;
+                }
+            });
+        }
     }
 }
 
-// 儲存勾選狀態到 localStorage
-function saveChecklistState() {
+// 儲存到 localStorage
+function saveToLocalStorage() {
     const checkboxes = document.querySelectorAll('.checklist-checkbox');
     const checkedItems = [];
-
     checkboxes.forEach(checkbox => {
         if (checkbox.checked) {
             checkedItems.push(checkbox.id);
         }
     });
-
     localStorage.setItem('texasTripChecklist', JSON.stringify(checkedItems));
+}
+
+// 儲存勾選狀態（同時存 localStorage 和更新 URL hash）
+function saveChecklistState() {
+    saveToLocalStorage();
+    updateUrlHash();
 }
 
 // 初始化待辦清單功能
