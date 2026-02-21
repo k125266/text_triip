@@ -156,9 +156,9 @@ const dayData = {
             { time: '14:45-15:00', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 15 分鐘前往飛行博物館', category: 'transport' },
             { time: '15:00-17:00', title: '景點', desc: '<strong>Frontiers of Flight Museum</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 6911 Lemmon Ave<br>NASA 太空艙', category: 'attraction', price: '門票 $10 ≈ NTD 320' },
             { time: '17:00-17:30', title: '回程放車', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 15 分鐘回住宿放車', category: 'transport' },
-            { time: '17:30-18:00', title: '簡餐', desc: '住宿附近快速進餐<br>（如 Shake Shack 或簡餐店）', category: 'dining', price: 'NTD 500' },
-            { time: '18:00-18:15', title: '輕軌前往球場', desc: '<img src="https://cdn-icons-png.flaticon.com/512/1034/1034795.png" alt="Light Rail" class="basketball-icon tiny"> DART 輕軌 Akard Station ➜ Victory Station<br>約 5 分鐘車程＋步行', category: 'transport', price: '來回 $5 ≈ NTD 160' },
-            { time: '18:15-19:00', title: '球場周邊購物', desc: '<img src="https://cdn-icons-png.flaticon.com/512/7462/7462399.png" alt="Basketball" class="basketball-icon tiny"> Hangar 獨行俠官方商店<br>球衣、紀念品選購', category: 'shopping', isNBA: true },
+            { time: '17:30-17:45', title: '輕軌前往球場', desc: '<img src="https://cdn-icons-png.flaticon.com/512/1034/1034795.png" alt="Light Rail" class="basketball-icon tiny"> DART 輕軌 Akard Station ➜ Victory Station<br>約 5 分鐘車程＋步行', category: 'transport', price: '來回 $5 ≈ NTD 160' },
+            { time: '17:45-18:30', title: '球場周邊購物', desc: '<img src="https://cdn-icons-png.flaticon.com/512/7462/7462399.png" alt="Basketball" class="basketball-icon tiny"> Hangar 獨行俠官方商店<br>球衣、紀念品選購', category: 'shopping', isNBA: true },
+            { time: '18:30-19:00', title: '球場晚餐', desc: '場內美食攤位用餐<br>漢堡、熱狗、Nachos 等美式小吃', category: 'dining', price: 'NTD 500', isNBA: true },
             { time: '19:00-21:30', title: 'NBA Game', desc: '<strong style="color: #FFA500;">獨行俠 vs 雷霆</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7462/7462399.png" alt="Basketball" class="basketball-icon"> American Airlines Center', category: 'nba', price: '門票 $120 ≈ NTD 3,840', isNBA: true }
         ],
         budget: 'NTD 5,420'
