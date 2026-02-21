@@ -109,9 +109,9 @@ const dayData = {
         activities: [
             { time: '19:15-19:30', title: '航班抵達', desc: 'EVA BR52 抵達 DFW 機場', category: 'arrival' },
             { time: '19:30-20:00', title: '租車取車', desc: '前往 Turo 指定地點領取 Tesla<br>檢查 FSD 狀態', category: 'transport' },
-            { time: '20:00-20:45', title: '城市接駁', desc: 'DFW 機場 ➜ 達拉斯市中心住宿<br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1555 Elm St', category: 'transport' },
+            { time: '20:00-20:45', title: '城市接駁', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> DFW 機場 ➜ 達拉斯市中心住宿（開車約 40 分鐘）<br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1555 Elm St', category: 'transport' },
             { time: '20:45-21:00', title: '入住 Check-in', desc: '高層景觀公寓入住、行李安置', category: 'accommodation' },
-            { time: '21:00-21:45', title: '超市採買', desc: '<strong>Tom Thumb</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 2380 N Field St<br>購置生活備品、早餐、飲料', category: 'shopping', price: 'NT$300-500' },
+            { time: '21:00-21:45', title: '超市採買', desc: '<strong>Tom Thumb</strong>（<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 5 分鐘）<br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 2380 N Field St<br>購置生活備品、早餐、飲料', category: 'shopping', price: 'NT$300-500' },
             { time: '21:45-22:15', title: '整理與休息', desc: '準備隔日行程', category: 'rest' }
         ],
         budget: 'NTD 500'
@@ -121,11 +121,11 @@ const dayData = {
         date: '2/27 週五',
         activities: [
             { time: '08:00-11:45', title: '晨間休息', desc: '公寓享受市中心景觀、居家早餐', category: 'rest' },
-            { time: '11:45-12:00', title: '步行移動', desc: '前往 City Hall Bistro', category: 'transport' },
+            { time: '11:45-12:00', title: '步行移動', desc: '<img src="https://cdn-icons-png.flaticon.com/512/5147/5147215.png" alt="Walking" class="basketball-icon tiny"> 步行約 5 分鐘前往 City Hall Bistro', category: 'transport' },
             { time: '12:00-13:30', title: '午餐', desc: '<strong>City Hall Bistro</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1321 Commerce St (步行 5 分鐘)<br>南歐風味、羊肉串', category: 'dining', price: '$20-28 ≈ NTD 650-900' },
-            { time: '13:30-13:45', title: '車程', desc: '前往 Perot Museum', category: 'transport' },
+            { time: '13:30-13:45', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘前往 Perot Museum', category: 'transport' },
             { time: '13:45-17:00', title: '景點', desc: '<strong>Perot Museum</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 2201 N Field St (車程 6 分鐘)<br>自然科學博物館、恐龍化石', category: 'attraction', price: '門票 $25 ≈ NTD 800<br>停車 $10-15 ≈ NTD 480' },
-            { time: '17:00-18:00', title: '回程休息', desc: '市中心散步或公寓短暫休息', category: 'rest' },
+            { time: '17:00-18:00', title: '回程休息', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘回住宿<br>市中心散步或公寓短暫休息', category: 'rest' },
             { time: '18:00-20:00', title: '晚餐', desc: '<strong>The Woolworth</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1520 Elm St #201 (步行 5 分鐘)<br>露台調酒、精緻美式料理', category: 'dining', price: '$22-32 ≈ NTD 1,000' }
         ],
         budget: 'NTD 2,900'
@@ -135,11 +135,11 @@ const dayData = {
         date: '2/28 週六',
         activities: [
             { time: '09:00-11:45', title: '晨間自由活動', desc: '市中心探索或休息', category: 'rest' },
-            { time: '11:45-12:00', title: '步行移動', desc: '前往餐廳', category: 'transport' },
+            { time: '11:45-12:00', title: '步行移動', desc: '<img src="https://cdn-icons-png.flaticon.com/512/5147/5147215.png" alt="Walking" class="basketball-icon tiny"> 步行約 6 分鐘前往 Partenope Ristorante', category: 'transport' },
             { time: '12:00-13:30', title: '午餐', desc: '<strong>Partenope Ristorante</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1903 Main St (步行 6 分鐘)<br>正宗拿坡里披薩', category: 'dining', price: '$18-28 ≈ NTD 900' },
-            { time: '13:30-13:45', title: '車程', desc: '前往水族館', category: 'transport' },
+            { time: '13:30-13:45', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘前往 Dallas World Aquarium', category: 'transport' },
             { time: '13:45-16:30', title: '景點', desc: '<strong>Dallas World Aquarium</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1801 N Griffin St (車程 6 分鐘)<br>雨林動線、鯊魚隧道', category: 'attraction', price: '門票 $30 ≈ NTD 960<br>停車 $15 ≈ NTD 480' },
-            { time: '16:30-18:15', title: '車程/緩衝', desc: '前往 Henderson Ave 區域', category: 'transport' },
+            { time: '16:30-18:15', title: '車程/緩衝', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 12 分鐘前往 Henderson Ave 區域', category: 'transport' },
             { time: '18:15-20:15', title: '晚餐', desc: '<strong>Tei Tei Robata Bar</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 2906 N Henderson Ave (車程 12 分鐘)<br>日式炭火串燒、清酒', category: 'dining', price: '$28-40 ≈ NTD 1,280' }
         ],
         budget: 'NTD 3,620'
@@ -151,22 +151,23 @@ const dayData = {
             { time: '10:00-12:00', title: '慢活早晨', desc: '享受公寓設施', category: 'rest' },
             { time: '12:00-13:30', title: '午餐', desc: '外送 (Tex-Mex 或披薩)<br>在公寓內輕鬆用餐', category: 'dining', price: 'NTD 600' },
             { time: '13:30-14:45', title: '休息時間', desc: '為晚間 NBA 比賽儲備體力', category: 'rest' },
-            { time: '14:45-15:00', title: '車程', desc: '前往飛行博物館', category: 'transport' },
-            { time: '15:00-17:00', title: '景點', desc: '<strong>Frontiers of Flight Museum</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 6911 Lemmon Ave (車程 15 分鐘)<br>NASA 太空艙', category: 'attraction', price: '門票 $10 ≈ NTD 320' },
-            { time: '17:00-17:30', title: '車程', desc: '前往 AAC 球館附近', category: 'transport' },
-            { time: '17:30-18:45', title: '簡餐', desc: '球場附近快速進餐<br>(如 Shake Shack 或簡餐店)', category: 'dining', price: 'NTD 500' },
-            { time: '19:00-21:30', title: 'NBA Game', desc: '<strong style="color: #FFA500;">獨行俠 vs 雷霆</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7462/7462399.png" alt="Basketball" class="basketball-icon"> American Airlines Center', category: 'nba', price: '門票 $120 ≈ NTD 3,840<br>停車 $30 ≈ NTD 960', isNBA: true }
+            { time: '14:45-15:00', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 15 分鐘前往飛行博物館', category: 'transport' },
+            { time: '15:00-17:00', title: '景點', desc: '<strong>Frontiers of Flight Museum</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 6911 Lemmon Ave<br>NASA 太空艙', category: 'attraction', price: '門票 $10 ≈ NTD 320' },
+            { time: '17:00-17:30', title: '回程放車', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 15 分鐘回住宿放車', category: 'transport' },
+            { time: '17:30-18:30', title: '簡餐', desc: '住宿附近快速進餐<br>（如 Shake Shack 或簡餐店）', category: 'dining', price: 'NTD 500' },
+            { time: '18:30-19:00', title: '輕軌前往球場', desc: '<img src="https://cdn-icons-png.flaticon.com/512/1034/1034795.png" alt="Light Rail" class="basketball-icon tiny"> DART 輕軌 Akard Station ➜ Victory Station<br>約 5 分鐘車程＋步行', category: 'transport', price: '來回 $5 ≈ NTD 160' },
+            { time: '19:00-21:30', title: 'NBA Game', desc: '<strong style="color: #FFA500;">獨行俠 vs 雷霆</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7462/7462399.png" alt="Basketball" class="basketball-icon"> American Airlines Center', category: 'nba', price: '門票 $120 ≈ NTD 3,840', isNBA: true }
         ],
-        budget: 'NTD 6,220'
+        budget: 'NTD 5,420'
     },
     5: {
         title: 'Day 5｜美式美學 Waco 轉點之旅',
         date: '3/2 週一',
         activities: [
             { time: '09:30-11:00', title: '退房與裝車', desc: '離開達拉斯公寓', category: 'accommodation' },
-            { time: '11:00-12:30', title: '南下車程', desc: 'I-35 前往 Waco<br>Tesla FSD 體驗', category: 'transport' },
+            { time: '11:00-12:30', title: '南下車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> I-35 南下前往 Waco（開車約 1.5 小時）<br>Tesla FSD 體驗', category: 'transport' },
             { time: '12:30-15:00', title: '午餐與導覽', desc: '<strong>Magnolia Market</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 601 Webster Ave, Waco<br>美式鄉村風、美食車', category: 'attraction', price: 'NTD 650' },
-            { time: '15:00-16:30', title: '車程', desc: 'Waco ➜ 奧斯汀 (Austin)', category: 'transport' },
+            { time: '15:00-16:30', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> Waco ➜ 奧斯汀（開車約 1.5 小時）', category: 'transport' },
             { time: '16:30-17:30', title: '入住 Check-in', desc: 'Austin 住宅區民宿辦理入住<br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1209 E M. Franklin Ave', category: 'accommodation' },
             { time: '17:30-19:30', title: '晚餐', desc: '外送 (Austin 特色烤肉或健康餐盒)', category: 'dining', price: 'NTD 700' },
             { time: '19:30-22:00', title: '休息', desc: 'Austin 住宅區靜謐夜晚', category: 'rest' }
@@ -178,11 +179,11 @@ const dayData = {
         date: '3/3 週二',
         activities: [
             { time: '09:30-11:00', title: '整理行李', desc: '退房並準備出發', category: 'accommodation' },
-            { time: '11:00-11:45', title: '車程', desc: '前往 San Marcos Outlets', category: 'transport' },
+            { time: '11:00-11:45', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 45 分鐘前往 San Marcos Outlets', category: 'transport' },
             { time: '11:45-14:30', title: '購物與午餐', desc: '<strong>San Marcos Premium Outlets</strong><br>快速午餐', category: 'shopping', price: 'NTD 600' },
-            { time: '14:30-15:30', title: '車程', desc: 'San Marcos ➜ 聖安東尼奧', category: 'transport' },
+            { time: '14:30-15:30', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> San Marcos ➜ 聖安東尼奧（開車約 50 分鐘）', category: 'transport' },
             { time: '15:30-16:00', title: '入住 Check-in', desc: 'Southtown 歷史區住宿<br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 113 San Arturo St', category: 'accommodation' },
-            { time: '16:00-18:00', title: '景點', desc: '<strong>The Pearl District</strong><br>歷史酒廠改建文化區', category: 'attraction' },
+            { time: '16:00-18:00', title: '景點', desc: '<strong>The Pearl District</strong>（<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 8 分鐘）<br>歷史酒廠改建文化區', category: 'attraction' },
             { time: '18:00-19:30', title: '晚餐', desc: 'Pearl 區特色餐廳或外送', category: 'dining', price: 'NTD 700' }
         ],
         budget: 'NTD 1,300'
@@ -192,11 +193,11 @@ const dayData = {
         date: '3/4 週三',
         activities: [
             { time: '10:00-11:45', title: '慢活早晨', desc: '漫步 Southtown 歷史街區', category: 'rest' },
-            { time: '11:45-12:00', title: '車程', desc: '前往河濱步行區', category: 'transport' },
+            { time: '11:45-12:00', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 5 分鐘前往 River Walk', category: 'transport' },
             { time: '12:00-13:30', title: '午餐', desc: '<strong>Rainforest Cafe</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 110 E Crockett St<br>雨林主題體驗', category: 'dining', price: '$18-28 ≈ NTD 900<br>停車 $12 ≈ NTD 400' },
             { time: '13:30-16:30', title: '景點', desc: '<strong>River Walk 漫步</strong><br>GO RIO 運河遊船', category: 'attraction', price: '遊船 $15 ≈ NTD 480' },
             { time: '16:30-17:30', title: '景點', desc: '<strong>La Villita Arts Village</strong><br>藝術村手工藝', category: 'attraction' },
-            { time: '17:30-18:00', title: '步行/接駁', desc: '前往晚餐地點', category: 'transport' },
+            { time: '17:30-18:00', title: '步行前往餐廳', desc: '<img src="https://cdn-icons-png.flaticon.com/512/5147/5147215.png" alt="Walking" class="basketball-icon tiny"> 步行約 5 分鐘前往 Pharm Table', category: 'transport' },
             { time: '18:00-19:45', title: '晚餐', desc: '<strong>Pharm Table</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 611 S Presa St Suite 106<br>健康創意料理', category: 'dining', price: '$22-35 ≈ NTD 1,120' }
         ],
         budget: 'NTD 2,900'
@@ -206,11 +207,11 @@ const dayData = {
         date: '3/5 週四',
         activities: [
             { time: '08:30-10:00', title: '最後巡禮', desc: '早起退房、出發北上', category: 'accommodation' },
-            { time: '10:00-11:30', title: '北上車程', desc: '聖安東尼奧 ➜ 奧斯汀', category: 'transport' },
+            { time: '10:00-11:30', title: '北上車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 聖安東尼奧 ➜ 奧斯汀（開車約 1.5 小時）', category: 'transport' },
             { time: '11:30-13:00', title: '景點', desc: '<strong>Pinballz Lake Creek</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 8940 Research Blvd, Austin<br>復古彈珠台/午餐', category: 'attraction', price: '代幣 $15 ≈ NTD 480' },
-            { time: '13:00-16:30', title: '長途車程', desc: '奧斯汀 ➜ 達拉斯 Grapevine 區域', category: 'transport' },
+            { time: '13:00-16:30', title: '長途車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 奧斯汀 ➜ 達拉斯 Grapevine 區域（開車約 3 小時）', category: 'transport' },
             { time: '16:30-18:45', title: '最後購物', desc: '<strong>Grapevine Mills</strong><br>免稅採買、早晚餐', category: 'shopping', price: 'NTD 800' },
-            { time: '18:45-19:30', title: '機場移動', desc: '前往 DFW 車站還車<br>Turo 還車手續', category: 'transport' },
+            { time: '18:45-19:30', title: '機場移動', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 15 分鐘前往 DFW<br>Turo 還車手續', category: 'transport' },
             { time: '19:30-20:30', title: '登機手續', desc: 'EVA Air 櫃檯託運、出境安檢', category: 'checkin' },
             { time: '22:50', title: '起飛', desc: '<strong>返家航班 BR53</strong><br>3/7 抵達台北', category: 'return', isReturn: true }
         ],
