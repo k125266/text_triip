@@ -139,7 +139,9 @@ const dayData = {
             { time: '12:00-13:30', title: '午餐', desc: '<strong>Partenope Ristorante</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1903 Main St (步行 6 分鐘)<br>正宗拿坡里披薩', category: 'dining', price: '$18-28 ≈ NTD 900' },
             { time: '13:30-13:45', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘前往 Dallas World Aquarium', category: 'transport' },
             { time: '13:45-16:30', title: '景點', desc: '<strong>Dallas World Aquarium</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1801 N Griffin St (車程 6 分鐘)<br>雨林動線、鯊魚隧道', category: 'attraction', price: '門票 $30 ≈ NTD 960<br>停車 $15 ≈ NTD 480' },
-            { time: '16:30-18:15', title: '車程/緩衝', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 12 分鐘前往 Henderson Ave 區域', category: 'transport' },
+            { time: '16:30-16:45', title: '回程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘回住宿', category: 'transport' },
+            { time: '16:45-18:00', title: '回民宿休息', desc: '短暫休息、梳洗準備晚餐', category: 'rest' },
+            { time: '18:00-18:15', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 12 分鐘前往 Henderson Ave 區域', category: 'transport' },
             { time: '18:15-20:15', title: '晚餐', desc: '<strong>Tei Tei Robata Bar</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 2906 N Henderson Ave (車程 12 分鐘)<br>日式炭火串燒、清酒', category: 'dining', price: '$28-40 ≈ NTD 1,280' }
         ],
         budget: 'NTD 3,620'
@@ -154,8 +156,10 @@ const dayData = {
             { time: '14:45-15:00', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 15 分鐘前往飛行博物館', category: 'transport' },
             { time: '15:00-17:00', title: '景點', desc: '<strong>Frontiers of Flight Museum</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 6911 Lemmon Ave<br>NASA 太空艙', category: 'attraction', price: '門票 $10 ≈ NTD 320' },
             { time: '17:00-17:30', title: '回程放車', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 15 分鐘回住宿放車', category: 'transport' },
-            { time: '17:30-18:30', title: '簡餐', desc: '住宿附近快速進餐<br>（如 Shake Shack 或簡餐店）', category: 'dining', price: 'NTD 500' },
-            { time: '18:30-19:00', title: '輕軌前往球場', desc: '<img src="https://cdn-icons-png.flaticon.com/512/1034/1034795.png" alt="Light Rail" class="basketball-icon tiny"> DART 輕軌 Akard Station ➜ Victory Station<br>約 5 分鐘車程＋步行', category: 'transport', price: '來回 $5 ≈ NTD 160' },
+            { time: '17:30-17:45', title: '休息準備', desc: '整理出門、準備前往球場', category: 'rest' },
+            { time: '17:45-18:00', title: '輕軌前往球場', desc: '<img src="https://cdn-icons-png.flaticon.com/512/1034/1034795.png" alt="Light Rail" class="basketball-icon tiny"> DART 輕軌 Akard Station ➜ Victory Station<br>約 5 分鐘車程＋步行', category: 'transport', price: '來回 $5 ≈ NTD 160' },
+            { time: '18:00-18:30', title: '球場周邊購物', desc: '<img src="https://cdn-icons-png.flaticon.com/512/7462/7462399.png" alt="Basketball" class="basketball-icon tiny"> Hangar 獨行俠官方商店<br>球衣、紀念品選購', category: 'shopping', isNBA: true },
+            { time: '18:30-19:00', title: '球場晚餐', desc: '場內美食攤位用餐<br>漢堡、熱狗、Nachos 等美式小吃', category: 'dining', price: 'NTD 500', isNBA: true },
             { time: '19:00-21:30', title: 'NBA Game', desc: '<strong style="color: #FFA500;">獨行俠 vs 雷霆</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7462/7462399.png" alt="Basketball" class="basketball-icon"> American Airlines Center', category: 'nba', price: '門票 $120 ≈ NTD 3,840', isNBA: true }
         ],
         budget: 'NTD 5,420'
