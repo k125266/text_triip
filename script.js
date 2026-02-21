@@ -139,7 +139,9 @@ const dayData = {
             { time: '12:00-13:30', title: '午餐', desc: '<strong>Partenope Ristorante</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1903 Main St (步行 6 分鐘)<br>正宗拿坡里披薩', category: 'dining', price: '$18-28 ≈ NTD 900' },
             { time: '13:30-13:45', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘前往 Dallas World Aquarium', category: 'transport' },
             { time: '13:45-16:30', title: '景點', desc: '<strong>Dallas World Aquarium</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1801 N Griffin St (車程 6 分鐘)<br>雨林動線、鯊魚隧道', category: 'attraction', price: '門票 $30 ≈ NTD 960<br>停車 $15 ≈ NTD 480' },
-            { time: '16:30-18:15', title: '車程/緩衝', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 12 分鐘前往 Henderson Ave 區域', category: 'transport' },
+            { time: '16:30-16:45', title: '回程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘回住宿', category: 'transport' },
+            { time: '16:45-18:00', title: '回民宿休息', desc: '短暫休息、梳洗準備晚餐', category: 'rest' },
+            { time: '18:00-18:15', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 12 分鐘前往 Henderson Ave 區域', category: 'transport' },
             { time: '18:15-20:15', title: '晚餐', desc: '<strong>Tei Tei Robata Bar</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 2906 N Henderson Ave (車程 12 分鐘)<br>日式炭火串燒、清酒', category: 'dining', price: '$28-40 ≈ NTD 1,280' }
         ],
         budget: 'NTD 3,620'
