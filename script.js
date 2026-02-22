@@ -198,7 +198,7 @@ const dayData = {
         activities: [
             { time: '10:00-11:45', title: '慢活早晨', desc: '漫步 Southtown 歷史街區', category: 'rest' },
             { time: '11:45-12:00', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 5 分鐘前往 River Walk', category: 'transport' },
-            { time: '12:00-13:30', title: '午餐', desc: '<strong>Rainforest Cafe</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 110 E Crockett St<br>雨林主題體驗', category: 'dining', price: '$18-28 ≈ NTD 900<br>停車 $12 ≈ NTD 400' },
+            { time: '12:00-13:30', title: '午餐', desc: '<strong>Rainforest Cafe</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 110 E Crockett St<br>雨林主題體驗<br>📎 餐廳無自有停車場，需停附近公共停車場', category: 'dining', price: '$18-28 ≈ NTD 900<br>附近停車 $10-15 ≈ NTD 320-480' },
             { time: '13:30-16:30', title: '景點', desc: '<strong>River Walk 漫步</strong><br>GO RIO 運河遊船', category: 'attraction', price: '遊船 $15 ≈ NTD 480' },
             { time: '16:30-17:30', title: '景點', desc: '<strong>La Villita Arts Village</strong><br>藝術村手工藝', category: 'attraction' },
             { time: '17:30-17:40', title: '回程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 5 分鐘回民宿停車', category: 'transport' },
