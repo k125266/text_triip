@@ -123,15 +123,16 @@ const dayData = {
             { time: '08:00-11:45', title: '晨間休息', desc: '公寓享受市中心景觀、居家早餐', category: 'rest' },
             { time: '11:45-12:00', title: '步行移動', desc: '<img src="https://cdn-icons-png.flaticon.com/512/5147/5147215.png" alt="Walking" class="basketball-icon tiny"> 步行約 5 分鐘前往 City Hall Bistro', category: 'transport' },
             { time: '12:00-13:30', title: '午餐', desc: '<strong>City Hall Bistro</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1321 Commerce St (步行 5 分鐘)<br>南歐風味、羊肉串', category: 'dining', price: '$20-28 ≈ NTD 650-900' },
-            { time: '13:30-13:45', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘前往 Perot Museum', category: 'transport' },
-            { time: '13:45-17:00', title: '景點', desc: '<strong>Perot Museum</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 2201 N Field St (車程 6 分鐘)<br>自然科學博物館、恐龍化石', category: 'attraction', price: '門票 $25 ≈ NTD 800<br>停車 $10-15 ≈ NTD 480' },
-            { time: '17:00-18:00', title: '回程休息', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘回住宿<br>市中心散步或公寓短暫休息', category: 'rest' },
+            { time: '13:30-15:00', title: '午後休息', desc: '市中心散步或公寓短暫休息', category: 'rest' },
+            { time: '15:00-15:10', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘前往 Perot Museum', category: 'transport' },
+            { time: '15:00-17:15', title: '景點', desc: '<strong>Perot Museum</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 2201 N Field St (車程 6 分鐘)<br>自然科學博物館、恐龍化石', category: 'attraction', price: '門票 $25 ≈ NTD 800<br>停車 $10-15 ≈ NTD 480' },
+            { time: '17:15-17:30', title: '回程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘回住宿', category: 'transport' },
             { time: '18:00-20:00', title: '晚餐', desc: '<strong>The Woolworth</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1520 Elm St #201 (步行 5 分鐘)<br>露台調酒、精緻美式料理', category: 'dining', price: '$22-32 ≈ NTD 1,000' }
         ],
         budget: 'NTD 2,900'
     },
     3: {
-        title: 'Day 3｜雨林冒險與日式炭火',
+        title: 'Day 3｜雨林冒險與在地美食',
         date: '2/28 週六',
         activities: [
             { time: '09:00-11:45', title: '晨間自由活動', desc: '市中心探索或休息', category: 'rest' },
@@ -141,10 +142,9 @@ const dayData = {
             { time: '13:45-16:30', title: '景點', desc: '<strong>Dallas World Aquarium</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 1801 N Griffin St (車程 6 分鐘)<br>雨林動線、鯊魚隧道', category: 'attraction', price: '門票 $30 ≈ NTD 960<br>停車 $15 ≈ NTD 480' },
             { time: '16:30-16:45', title: '回程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 6 分鐘回住宿', category: 'transport' },
             { time: '16:45-18:00', title: '回民宿休息', desc: '短暫休息、梳洗準備晚餐', category: 'rest' },
-            { time: '18:00-18:15', title: '車程', desc: '<img src="https://cdn-icons-png.flaticon.com/512/9709/9709678.png" alt="Car" class="basketball-icon tiny"> 開車約 12 分鐘前往 Henderson Ave 區域', category: 'transport' },
-            { time: '18:15-20:15', title: '晚餐', desc: '<strong>Tei Tei Robata Bar</strong><br><img src="https://cdn-icons-png.flaticon.com/512/7763/7763870.png" alt="Location" class="basketball-icon tiny"> 2906 N Henderson Ave (車程 12 分鐘)<br>日式炭火串燒、清酒', category: 'dining', price: '$28-40 ≈ NTD 1,280' }
+            { time: '18:00-20:00', title: '晚餐', desc: '老闆 Steven 推薦的附近餐廳', category: 'dining', price: '$25-35 ≈ NTD 800-1,120' }
         ],
-        budget: 'NTD 3,620'
+        budget: 'NTD 3,140'
     },
     4: {
         title: 'Day 4｜飛行夢想與 NBA 熱血戰',
