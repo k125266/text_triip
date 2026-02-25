@@ -1124,6 +1124,10 @@
     color: var(--text-secondary);
 }
 
+.reminder-list li:last-child {
+    margin-bottom: 0;
+}
+
 .reminder-list li:before {
     content: '→';
     position: absolute;
