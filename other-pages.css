@@ -939,7 +939,7 @@
 .category-title {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     font-size: 1.3em;
     font-weight: 700;
     color: var(--tetsukon);
@@ -950,6 +950,10 @@
 
 .category-icon {
     font-size: 1.4em;
+    flex-shrink: 0;
+    min-width: 1.4em;
+    text-align: center;
+    margin-right: 4px;
 }
 
 /* 物品列表 */
@@ -1218,6 +1222,7 @@
 
     .category-title {
         font-size: 1.1em;
+        gap: 14px;
         margin-bottom: 14px;
     }
 
@@ -1351,12 +1356,15 @@
 
     .category-title {
         font-size: 1em;
+        gap: 12px;
         margin-bottom: 12px;
         padding-bottom: 10px;
     }
 
     .category-icon {
         font-size: 1.2em;
+        min-width: 1.3em;
+        margin-right: 2px;
     }
 
     .packing-item {
