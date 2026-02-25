@@ -939,7 +939,7 @@
 .category-title {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     font-size: 1.3em;
     font-weight: 700;
     color: var(--tetsukon);
@@ -951,9 +951,9 @@
 .category-icon {
     font-size: 1.4em;
     flex-shrink: 0;
-    min-width: 1.4em;
+    min-width: 1.5em;
     text-align: center;
-    margin-right: 4px;
+    margin-right: 6px;
 }
 
 /* 物品列表 */
